@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fusion.Unity.Editor", "Fusion.Unity.Editor.csproj", "{127CDC30-B7F0-9022-96EC-D8DAEBF6C16A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{83730285-3335-F2E6-5CA6-FAADA038D3E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{53D49841-61E0-635B-64FD-9316C6498961}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fusion.Unity", "Fusion.Unity.csproj", "{1DD1B64F-8359-15EC-E02A-69774DBA8434}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fusion.Addons.Physics", "Fusion.Addons.Physics.csproj", "{AE551264-9801-CF92-6A8F-73B2D0135FE2}"
@@ -21,6 +25,14 @@ Global
 		{127CDC30-B7F0-9022-96EC-D8DAEBF6C16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{127CDC30-B7F0-9022-96EC-D8DAEBF6C16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{127CDC30-B7F0-9022-96EC-D8DAEBF6C16A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83730285-3335-F2E6-5CA6-FAADA038D3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83730285-3335-F2E6-5CA6-FAADA038D3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83730285-3335-F2E6-5CA6-FAADA038D3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83730285-3335-F2E6-5CA6-FAADA038D3E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D49841-61E0-635B-64FD-9316C6498961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D49841-61E0-635B-64FD-9316C6498961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D49841-61E0-635B-64FD-9316C6498961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D49841-61E0-635B-64FD-9316C6498961}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1DD1B64F-8359-15EC-E02A-69774DBA8434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1DD1B64F-8359-15EC-E02A-69774DBA8434}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DD1B64F-8359-15EC-E02A-69774DBA8434}.Release|Any CPU.ActiveCfg = Release|Any CPU
