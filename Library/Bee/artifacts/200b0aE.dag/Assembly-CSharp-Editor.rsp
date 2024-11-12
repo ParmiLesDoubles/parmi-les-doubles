@@ -421,7 +421,7 @@
 "Assets/Flooded_Grounds/PostProcessing/Editor/Utils/EditorResources.cs"
 "Assets/Flooded_Grounds/PostProcessing/Editor/Utils/FxStyles.cs"
 "Assets/Flooded_Grounds/PostProcessing/Editor/Utils/ReflectionUtils.cs"
-"Assets/unity-chan!/Unity-chan! Model/Editor/CreateLocatorHere.cs"
+"Assets/Unity-chan!/Editor/CreateLocatorHere.cs"
 -langversion:9.0
 /unsafe+
 /deterministic
