@@ -389,3 +389,23 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:scripting/precompiled-assembly-types:Assembly-CSharp-Editor: 3109ec9c7e0d1dc9090aabb6104b2f70 -> 1107b457ddd7243184a186f6c0b2e09f
   custom:scripting/precompiled-assembly-types:Assembly-CSharp: 1b3d7b8082b4834583d4e58ec896da40 -> 95cdb8393fdfa1fe2d1ad1bd4c57ef74
+========================================================================
+Received Import Request.
+  Time since last request: 1539.918875 seconds.
+  path: Assets/Flooded_Grounds/Content/Trees/SrcTextures/FOL_Branch1_N.tif
+  artifactKey: Guid(8eab5014992a02147bca0eda9e602f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Flooded_Grounds/Content/Trees/SrcTextures/FOL_Branch1_N.tif using Guid(8eab5014992a02147bca0eda9e602f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: 'c6c1f8829a62de5115a8cd09ab1281e8') in 0.073377 seconds
+Number of updated asset objects reloaded before import = 4
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 20.788460 seconds.
+  path: Assets/Flooded_Grounds/Content/Trees/SrcTextures/FOL_Branch2_N.tif
+  artifactKey: Guid(a7012ccbfd374b84a89fd27deeab137b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Flooded_Grounds/Content/Trees/SrcTextures/FOL_Branch2_N.tif using Guid(a7012ccbfd374b84a89fd27deeab137b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '3f6276200d1507f56ad60d252d3a4d0b') in 0.008518 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
