@@ -133,7 +133,7 @@
     <None Include="Assets/Flooded_Grounds/PostProcessing/Resources/Shaders/GrainGen.shader" />
     <None Include="Assets/Flooded_Grounds/PostProcessing/Editor Resources/Monitors/HistogramCompute.compute" />
     <None Include="Assets/Flooded_Grounds/PostProcessing/Resources/Shaders/FXAA3.cginc" />
-    <None Include="Assets/Fantasy Forest Environment Free Sample/StandardNoCulling.shader" />
+    <None Include="Assets/Environnement/StandardNoCulling.shader" />
     <None Include="Assets/Flooded_Grounds/PostProcessing/Resources/Shaders/EyeAdaptation.shader" />
     <None Include="Assets/Flooded_Grounds/PostProcessing/Utilities/CustomMotionTexture/Shaders/CustomMotionVectorTexture.shader" />
     <None Include="Assets/Flooded_Grounds/PostProcessing/Editor Resources/UI/CurveBackground.shader" />
