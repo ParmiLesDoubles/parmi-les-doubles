@@ -64,34 +64,17 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Unity-chan!/Scripts/ThirdPersonCamera.cs" />
     <Compile Include="Assets/Scripts/GestionnaireReseau.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/UnityChanControlScriptWithRgidBody.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/FaceUpdate.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/IdleChanger.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/AutoBlink.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/SpringBone.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/RandomWind.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/IKCtrlRightHand.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/CameraController.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/SpringCollider.cs" />
-    <Compile Include="Assets/Unity-chan!/Scripts/SpringManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_fuku.shader" />
     <None Include="Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.xml" />
     <None Include="Assets/Environnement/StandardNoCulling.shader" />
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_akarami_blend.shader" />
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_hair_ds.shader" />
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_hada.shader" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Common.dll" />
     <None Include="Assets/Environnement/Ressources/TreeCreator/TreeCreatorBark.shader" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Runtime.xml" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/NanoSockets/Static/NanoSockets.dll" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Sockets.dll" />
     <None Include="Assets/Environnement/Ressources/TreeCreator/TreeCreatorLeavesOptimized.shader" />
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_fuku_ds.shader" />
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_eyelash_blend.shader" />
     <None Include="Assets/Photon/Fusion/release_history.txt" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Common.xml" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/NanoSockets/Dynamic/NanoSockets.dll" />
@@ -100,25 +83,19 @@
     <None Include="Assets/Photon/PhotonLibs/changes-library.txt" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/Metro/x64/libnanosockets.dll" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/Metro/x86/libnanosockets.dll" />
-    <None Include="Assets/Unity-chan!/Audio/Voice/unity-chan_voice_list.txt" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Realtime.xml" />
     <None Include="Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll" />
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_hada_blend.shader" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/Windows/nanosockets.dll" />
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_eye.shader" />
     <None Include="Assets/Environnement/Ressources/WavingGrass.shader" />
     <None Include="Assets/Environnement/Ressources/TreeCreator/TreeCreatorBarkOptimized.shader" />
     <None Include="Assets/Environnement/Ressources/TreeCreator/TreeCreatorLeaves.shader" />
     <None Include="Assets/Photon/Fusion/build_info.txt" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Realtime.dll" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/Metro/ARM64/libnanosockets.dll" />
-    <None Include="Assets/Unity-chan!/Art/Stage/Shader/AlphaMask.shader" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/WebGL/NanoSockets.dll" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Log.dll" />
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_hair.shader" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Sockets.xml" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/Metro/ARM/libnanosockets.dll" />
-    <None Include="Assets/Unity-chan!/Art/UnityChanShader/Shader/Unitychan_chara_eye_blend.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

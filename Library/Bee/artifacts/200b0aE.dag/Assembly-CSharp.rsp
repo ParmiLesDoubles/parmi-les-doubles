@@ -370,17 +370,6 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/GestionnaireReseau.cs"
-"Assets/Unity-chan!/Scripts/AutoBlink.cs"
-"Assets/Unity-chan!/Scripts/CameraController.cs"
-"Assets/Unity-chan!/Scripts/FaceUpdate.cs"
-"Assets/Unity-chan!/Scripts/IdleChanger.cs"
-"Assets/Unity-chan!/Scripts/IKCtrlRightHand.cs"
-"Assets/Unity-chan!/Scripts/RandomWind.cs"
-"Assets/Unity-chan!/Scripts/SpringBone.cs"
-"Assets/Unity-chan!/Scripts/SpringCollider.cs"
-"Assets/Unity-chan!/Scripts/SpringManager.cs"
-"Assets/Unity-chan!/Scripts/ThirdPersonCamera.cs"
-"Assets/Unity-chan!/Scripts/UnityChanControlScriptWithRgidBody.cs"
 -langversion:9.0
 /unsafe+
 /deterministic
