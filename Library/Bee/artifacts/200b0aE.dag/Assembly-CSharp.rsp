@@ -376,7 +376,9 @@
 "Assets/Scripts/GestionnaireReseau.cs"
 "Assets/Scripts/IKControl.cs"
 "Assets/Scripts/ImpactLifeCycle.cs"
+"Assets/Scripts/JoueurReseau.cs"
 "Assets/Scripts/PlayerScore.cs"
+"Assets/Scripts/Utilitaires.cs"
 -langversion:9.0
 /unsafe+
 /deterministic

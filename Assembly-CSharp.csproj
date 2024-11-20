@@ -67,7 +67,9 @@
     <Compile Include="Assets/Scripts/IKControl.cs" />
     <Compile Include="Assets/Scripts/GestionnaireReseau.cs" />
     <Compile Include="Assets/Scripts/PlayerScore.cs" />
+    <Compile Include="Assets/Scripts/JoueurReseau.cs" />
     <Compile Include="Assets/Scripts/CameraRotation.cs" />
+    <Compile Include="Assets/Scripts/Utilitaires.cs" />
     <Compile Include="Assets/Scripts/DoorAnimation.cs" />
     <Compile Include="Assets/Scripts/ImpactLifeCycle.cs" />
   </ItemGroup>
