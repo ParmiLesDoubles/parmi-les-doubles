@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3517549692066518513}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: LeftElbowHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4486075275860639192}
   - component: {fileID: 6226327196497876488}
   - component: {fileID: 8143519538133208858}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: NameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3376342228400656216}
-  m_Layer: 12
+  - component: {fileID: 6498746300443326455}
+  m_Layer: 0
   m_Name: JoueurReseau
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -359,9 +360,36 @@ Transform:
   m_Children:
   - {fileID: 3324206673054035144}
   - {fileID: 4438455414434550756}
+  - {fileID: 928720223870809010}
   - {fileID: 4984576921269430250}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &6498746300443326455
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083537900910956137}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1.7
+  m_Radius: 0.3
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.03
+  m_MinMoveDistance: 0
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &2026306678476474032
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +401,7 @@ GameObject:
   - component: {fileID: 7269183552025406729}
   - component: {fileID: 3060830812327178385}
   - component: {fileID: 5243511086267380729}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Ak47Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8854961154891274453}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: RightElbowHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9113407776522552349}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: LookAtHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -519,7 +547,7 @@ GameObject:
   - component: {fileID: 6984604258505504440}
   - component: {fileID: 3451511156380242192}
   - component: {fileID: 887170160853903560}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GunBarrelEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5540,7 +5568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6410170498043810216}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: LeftHandHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5572,7 +5600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5300874922736355482}
   - component: {fileID: 6522491545404163579}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Beta_Joints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5658,7 +5686,7 @@ GameObject:
   - component: {fileID: 8114529722747961884}
   - component: {fileID: 7348395830770886975}
   - component: {fileID: 1029619511877271434}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: NameTag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5737,7 +5765,7 @@ GameObject:
   - component: {fileID: 3186135238162761370}
   - component: {fileID: 2285055360141210388}
   - component: {fileID: 6816612267463625442}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Ak47Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5818,7 +5846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4254421662297513638}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: RightHandHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5840,6 +5868,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 562511710677978312}
   m_LocalEulerAnglesHint: {x: -17.558, y: -8.893001, z: -455.051}
+--- !u!1 &5401169322001373905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928720223870809010}
+  m_Layer: 0
+  m_Name: AncrageCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &928720223870809010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401169322001373905}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.59, z: 0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3376342228400656216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6240052596310785815
 GameObject:
   m_ObjectHideFlags: 0
@@ -5849,7 +5908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 873362561651353078}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: TpsGun_AK47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5887,7 +5946,7 @@ GameObject:
   - component: {fileID: 1159983547416491190}
   - component: {fileID: 713378920396706162}
   - component: {fileID: 7785025080591795491}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Ak47Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5970,7 +6029,7 @@ GameObject:
   - component: {fileID: 3974586970696179025}
   - component: {fileID: 8951648202401987892}
   - component: {fileID: 5276615065484052049}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6055,7 +6114,7 @@ GameObject:
   - component: {fileID: 767941714856910308}
   - component: {fileID: 3815180894669716309}
   - component: {fileID: 1473434868592353635}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: GunBarrelEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11172,7 +11231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899015311014333543}
   - component: {fileID: 7436242377728173411}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FpsGun_AK47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11230,7 +11289,7 @@ GameObject:
   - component: {fileID: 8257120869720819234}
   - component: {fileID: 565489309441145129}
   - component: {fileID: 3360970000844070408}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Ak47Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11313,7 +11372,7 @@ GameObject:
   - component: {fileID: 4236781783108662644}
   - component: {fileID: 4488718868123312397}
   - component: {fileID: 7320465680521572115}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Cube_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11394,7 +11453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 562511710677978312}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: IKPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11431,7 +11490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7674762639422019907}
   - component: {fileID: 1945303285980189959}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Beta_Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11645,9 +11704,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3324206673054035144}
   - component: {fileID: 8697760193131930113}
-  - component: {fileID: 4326779273132363190}
   - component: {fileID: 4741281960434016640}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Visuel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11693,27 +11751,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!135 &4326779273132363190
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9172303511405695988}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.95
-  m_Center: {x: 0, y: 0.92, z: 0}
 --- !u!114 &4741281960434016640
 MonoBehaviour:
   m_ObjectHideFlags: 0
