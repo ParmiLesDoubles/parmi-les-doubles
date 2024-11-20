@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Unity-chan!/Scripts/ThirdPersonCamera.cs" />
+    <Compile Include="Assets/Scripts/GestionnaireReseau.cs" />
     <Compile Include="Assets/Unity-chan!/Scripts/UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets/Unity-chan!/Scripts/FaceUpdate.cs" />
     <Compile Include="Assets/Unity-chan!/Scripts/IdleChanger.cs" />

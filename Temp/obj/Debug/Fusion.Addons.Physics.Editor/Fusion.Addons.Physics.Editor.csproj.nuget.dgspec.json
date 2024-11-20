@@ -1,0 +1,160 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.Editor.csproj": {}
+  },
+  "projects": {
+    "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.csproj",
+        "projectName": "Fusion.Addons.Physics",
+        "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.csproj",
+        "packagesPath": "/Users/phosphora/.nuget/packages/",
+        "outputPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Temp/obj/Debug/Fusion.Addons.Physics/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/phosphora/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Unity.csproj": {
+                "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Unity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.Editor.csproj",
+        "projectName": "Fusion.Addons.Physics.Editor",
+        "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.Editor.csproj",
+        "packagesPath": "/Users/phosphora/.nuget/packages/",
+        "outputPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Temp/obj/Debug/Fusion.Addons.Physics.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/phosphora/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.csproj": {
+                "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Unity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Unity.csproj",
+        "projectName": "Fusion.Unity",
+        "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Unity.csproj",
+        "packagesPath": "/Users/phosphora/.nuget/packages/",
+        "outputPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Temp/obj/Debug/Fusion.Unity/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/phosphora/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
