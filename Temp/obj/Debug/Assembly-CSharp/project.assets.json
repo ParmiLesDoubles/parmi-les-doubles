@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
+      "Assembly-CSharp-firstpass/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Fusion.Addons.Physics": "1.0.0",
+          "Fusion.Addons.Physics.Editor": "1.0.0",
+          "Fusion.Unity": "1.0.0",
+          "Fusion.Unity.Editor": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Assembly-CSharp-firstpass.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Assembly-CSharp-firstpass.dll": {}
+        }
+      },
       "Fusion.Addons.Physics/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -54,6 +70,11 @@
     }
   },
   "libraries": {
+    "Assembly-CSharp-firstpass/1.0.0": {
+      "type": "project",
+      "path": "Assembly-CSharp-firstpass.csproj",
+      "msbuildProject": "Assembly-CSharp-firstpass.csproj"
+    },
     "Fusion.Addons.Physics/1.0.0": {
       "type": "project",
       "path": "Fusion.Addons.Physics.csproj",
@@ -77,6 +98,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "Assembly-CSharp-firstpass >= 1.0.0",
       "Fusion.Addons.Physics >= 1.0.0",
       "Fusion.Addons.Physics.Editor >= 1.0.0",
       "Fusion.Unity >= 1.0.0",
@@ -108,6 +130,9 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Assembly-CSharp-firstpass.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Assembly-CSharp-firstpass.csproj"
+            },
             "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.csproj": {
               "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Fusion.Addons.Physics.csproj"
             },
