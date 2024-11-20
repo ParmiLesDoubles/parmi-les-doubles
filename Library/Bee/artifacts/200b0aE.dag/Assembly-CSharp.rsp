@@ -380,7 +380,6 @@
 "Assets/Unity-chan!/Scripts/SpringManager.cs"
 "Assets/Unity-chan!/Scripts/ThirdPersonCamera.cs"
 "Assets/Unity-chan!/Scripts/UnityChanControlScriptWithRgidBody.cs"
-"Assets/Unity-chan!/SplashScreen/Scripts/SplashScreen.cs"
 -langversion:9.0
 /unsafe+
 /deterministic

@@ -68,7 +68,6 @@
     <Compile Include="Assets/Unity-chan!/Scripts/UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets/Unity-chan!/Scripts/FaceUpdate.cs" />
     <Compile Include="Assets/Unity-chan!/Scripts/IdleChanger.cs" />
-    <Compile Include="Assets/Unity-chan!/SplashScreen/Scripts/SplashScreen.cs" />
     <Compile Include="Assets/Unity-chan!/Scripts/AutoBlink.cs" />
     <Compile Include="Assets/Unity-chan!/Scripts/SpringBone.cs" />
     <Compile Include="Assets/Unity-chan!/Scripts/RandomWind.cs" />
