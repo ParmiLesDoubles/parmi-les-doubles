@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Screen
+  - Metal
+  - Water
+  - Concrete
+  - Brick
+  - Wood
+  - Dirt
+  - Glass
   layers:
   - Default
   - TransparentFX
@@ -11,13 +19,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - JoueurFPS
+  - FPSGun
+  - JoueurTPS
+  - TPSGun
+  - Shootable
+  - Hidden
+  - Impact
   - 
   - 
   - 

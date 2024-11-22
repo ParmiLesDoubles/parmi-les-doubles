@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 475500536334968559}
   - component: {fileID: 6223292465816519517}
   - component: {fileID: 4217397061300603497}
+  - component: {fileID: 1444602607611224585}
   m_Layer: 0
-  m_Name: FPSMainCamera
+  m_Name: CameraFPS
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +76,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 7222
+    m_Bits: 1846
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -103,6 +104,18 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711839624238034445}
   m_Enabled: 1
+--- !u!114 &1444602607611224585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711839624238034445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ae0f3b44a9f4764ba6cc519a021451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1308896127098769512
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +127,7 @@ GameObject:
   - component: {fileID: 3716836151436139750}
   - component: {fileID: 4456298355163331708}
   - component: {fileID: 5619691006832675591}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ak47Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +302,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 17152
+    m_Bits: 20672
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -318,7 +331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1194512537888833279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftHandHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6161975961748557011}
   - component: {fileID: 5884195108028579828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beta_Joints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +449,7 @@ GameObject:
   - component: {fileID: 1586728402834886632}
   - component: {fileID: 4474624160244370495}
   - component: {fileID: 7569744287552823508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ak47Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4632330481783030309}
   - component: {fileID: 5308314660941647721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beta_Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1818926064629479777}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightElbowHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +649,7 @@ GameObject:
   - component: {fileID: 2042297720830613482}
   - component: {fileID: 3240723274636267859}
   - component: {fileID: 5866182280219483636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ak47Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9091142119039462466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftElbowHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -748,7 +761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4565791010979083710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TpsGun_AK47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +799,7 @@ GameObject:
   - component: {fileID: 3130385285075751191}
   - component: {fileID: 994689426983684706}
   - component: {fileID: 2595606021043427346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NameTag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +879,7 @@ GameObject:
   - component: {fileID: 1157488912116591909}
   - component: {fileID: 1323148291862858836}
   - component: {fileID: 6951086200955662780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +980,7 @@ GameObject:
   - component: {fileID: 7518317028377605054}
   - component: {fileID: 2905569667343231137}
   - component: {fileID: 1136567129667734989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ak47Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,7 +1061,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6859920730014539945}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1100,11 @@ GameObject:
   - component: {fileID: 1364462126319744611}
   - component: {fileID: 5760323388987637402}
   - component: {fileID: 2387703183814658316}
-  m_Layer: 0
+  - component: {fileID: 5198336716295408966}
+  - component: {fileID: 784334600982903449}
+  - component: {fileID: 7306574826852980047}
+  - component: {fileID: 8370643313092328950}
+  m_Layer: 10
   m_Name: JoueurReseau
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1157,6 +1174,7 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 2387703183814658316}
+  - {fileID: 8370643313092328950}
 --- !u!114 &2387703183814658316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,6 +1187,253 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef328c6c0df1c46b4b2b65c6be4ac52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &5198336716295408966
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974448412950470064}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &784334600982903449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974448412950470064}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsWalking: 0
+  m_WalkSpeed: 4
+  m_RunSpeed: 8
+  m_RunstepLenghten: 1
+  m_JumpSpeed: 8
+  m_StickToGroundForce: 10
+  m_GravityMultiplier: 2
+  m_MouseLook:
+    XSensitivity: 2
+    YSensitivity: 2
+    clampVerticalRotation: 1
+    MinimumX: -90
+    MaximumX: 90
+    smooth: 0
+    smoothTime: 5
+    lockCursor: 1
+  m_UseFovKick: 1
+  m_FovKick:
+    Camera: {fileID: 0}
+    originalFov: 0
+    FOVIncrease: 3
+    TimeToIncrease: 1
+    TimeToDecrease: 1
+    IncreaseCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_UseHeadBob: 1
+  m_HeadBob:
+    HorizontalBobRange: 0.33
+    VerticalBobRange: 0.33
+    Bobcurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1.5
+        value: -1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    VerticaltoHorizontalRatio: 1
+  m_JumpBob:
+    BobDuration: 0
+    BobAmount: 0
+  m_StepInterval: 5
+  m_FootstepSounds:
+  - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+  - {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
+  - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
+  m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
+  m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+--- !u!54 &7306574826852980047
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974448412950470064}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &8370643313092328950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974448412950470064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43dcf9d58dd6436b944e428836cdb55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2980730679319749694}
+  cameraObject: {fileID: 711839624238034445}
+  gunObject: {fileID: 3706217453110994945}
+  playerObject: {fileID: 7877453305512323733}
 --- !u!1 &6706001655320434323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,7 +1443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5587006422571384984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightHandHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1209,7 +1474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4875661663859813127}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LookAtHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1507,7 @@ GameObject:
   - component: {fileID: 3985286355110900370}
   - component: {fileID: 8822517453139574874}
   - component: {fileID: 16445289951351376}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1324,7 +1589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4804510019833748566}
   - component: {fileID: 2591257315840538426}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FpsGun_AK47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1382,7 +1647,7 @@ GameObject:
   - component: {fileID: 5640660895097968671}
   - component: {fileID: 2980730679319749694}
   - component: {fileID: 7852939392022709221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1459,7 +1724,7 @@ GameObject:
   - component: {fileID: 5802719320060108265}
   - component: {fileID: 7007977120332065849}
   - component: {fileID: 5200033159954068386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GunBarrelEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6578,7 +6843,7 @@ GameObject:
   - component: {fileID: 111776863432148057}
   - component: {fileID: 2510214950745422115}
   - component: {fileID: 6379883035349154645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunBarrelEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11729,7 +11994,7 @@ GameObject:
   - component: {fileID: 5908673459298694914}
   - component: {fileID: 7236778262309206130}
   - component: {fileID: 7240790202751283513}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
