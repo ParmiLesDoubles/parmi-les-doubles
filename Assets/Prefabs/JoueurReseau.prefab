@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 475500536334968559}
   - component: {fileID: 6223292465816519517}
   - component: {fileID: 4217397061300603497}
-  - component: {fileID: 1444602607611224585}
   m_Layer: 0
   m_Name: CameraFPS
   m_TagString: MainCamera
@@ -104,18 +103,6 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711839624238034445}
   m_Enabled: 1
---- !u!114 &1444602607611224585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711839624238034445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ae0f3b44a9f4764ba6cc519a021451, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1308896127098769512
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +748,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4565791010979083710}
+  - component: {fileID: 5485182344505201508}
+  - component: {fileID: 3112413674626358819}
   m_Layer: 9
   m_Name: TpsGun_AK47
   m_TagString: Untagged
@@ -788,6 +777,41 @@ Transform:
   - {fileID: 6859920730014539945}
   m_Father: {fileID: 4632330481783030309}
   m_LocalEulerAnglesHint: {x: -83.4, y: 97.5, z: -6.715}
+--- !u!114 &5485182344505201508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706217453110994945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 1711481078
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 3112413674626358819}
+--- !u!114 &3112413674626358819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706217453110994945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbc2a794711544ea8a189389b115212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localPositionYScale: 0.007
+  gunParticles: {fileID: 7007977120332065849}
+  gunAudio: {fileID: 2164134808076316830}
+  fpsGun: {fileID: 3335270999990465332}
+  animator: {fileID: 2591257315840538426}
 --- !u!1 &4007820655828360493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,10 +1195,12 @@ MonoBehaviour:
   SortKey: 4177363491
   ObjectInterest: 1
   Flags: 262145
-  NestedObjects: []
+  NestedObjects:
+  - {fileID: 5485182344505201508}
   NetworkedBehaviours:
   - {fileID: 2387703183814658316}
   - {fileID: 8370643313092328950}
+  - {fileID: 3335270999990465332}
 --- !u!114 &2387703183814658316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1589,6 +1615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4804510019833748566}
   - component: {fileID: 2591257315840538426}
+  - component: {fileID: 3335270999990465332}
   m_Layer: 7
   m_Name: FpsGun_AK47
   m_TagString: Untagged
@@ -1636,6 +1663,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3335270999990465332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629698373788587381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd12a06e00d54ea19654d2edf1af457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 20
+  timeBetweenBullets: 0.2
+  weaponRange: 100
+  tpsGun: {fileID: 3112413674626358819}
+  gunParticles: {fileID: 2510214950745422115}
+  gunLine: {fileID: 111776863432148057}
+  animator: {fileID: 2591257315840538426}
+  raycastCamera: {fileID: 475500536334968559}
+  impactFleshPrefab: {fileID: 5156623565577514297, guid: 3bab7a5306f074fb9b36eaf03b86e081, type: 3}
+  impactMetalPrefab: {fileID: 4438336516800513117, guid: e844690db889a498ebeb210407f787c9, type: 3}
+  impactWoodPrefab: {fileID: 5503196323146210630, guid: dc84b9d0ce7194f9e8f706d7ff3e3e9c, type: 3}
+  impactConcretePrefab: {fileID: 3950820189181447919, guid: 967cc38047397467985712587d4018c4, type: 3}
+  impactWaterPrefab: {fileID: 8703145519667535789, guid: d2ede86caeeb2415882aa7071833dc30, type: 3}
+  impactBrickPrefab: {fileID: 8896325816640209237, guid: 736044371553049199d9a2a867c7d005, type: 3}
+  impactGlassPrefab: {fileID: 5613422246497954520, guid: 5312d5d1197434a3b8e53d9fd2b0d127, type: 3}
+  impactDirtPrefab: {fileID: 3860251106495262126, guid: efb0af647838d45e697ed42ef7f947e4, type: 3}
+  impactDefaultPrefab: {fileID: 0}
 --- !u!1 &7877453305512323733
 GameObject:
   m_ObjectHideFlags: 0

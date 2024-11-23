@@ -66,10 +66,12 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/IKControl.cs" />
     <Compile Include="Assets/Scripts/GestionnaireReseau.cs" />
+    <Compile Include="Assets/Scripts/FpsGun.cs" />
     <Compile Include="Assets/Scripts/PlayerScore.cs" />
     <Compile Include="Assets/Scripts/JoueurReseau.cs" />
     <Compile Include="Assets/Scripts/NameTag.cs" />
     <Compile Include="Assets/Scripts/CameraRotation.cs" />
+    <Compile Include="Assets/Scripts/TpsGun.cs" />
     <Compile Include="Assets/Scripts/DoorAnimation.cs" />
     <Compile Include="Assets/Scripts/GestionnaireMouvementPersonnage.cs" />
     <Compile Include="Assets/Scripts/ImpactLifeCycle.cs" />

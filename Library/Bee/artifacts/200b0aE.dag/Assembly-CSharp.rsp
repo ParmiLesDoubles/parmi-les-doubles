@@ -373,6 +373,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/CameraRotation.cs"
 "Assets/Scripts/DoorAnimation.cs"
+"Assets/Scripts/FpsGun.cs"
 "Assets/Scripts/GestionnaireMouvementPersonnage.cs"
 "Assets/Scripts/GestionnaireReseau.cs"
 "Assets/Scripts/IKControl.cs"
@@ -380,6 +381,7 @@
 "Assets/Scripts/JoueurReseau.cs"
 "Assets/Scripts/NameTag.cs"
 "Assets/Scripts/PlayerScore.cs"
+"Assets/Scripts/TpsGun.cs"
 -langversion:9.0
 /unsafe+
 /deterministic
