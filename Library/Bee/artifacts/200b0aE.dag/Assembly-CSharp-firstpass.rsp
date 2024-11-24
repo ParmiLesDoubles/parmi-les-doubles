@@ -345,6 +345,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Fusion.Addons.Physics.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Fusion.Unity.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Fusion.Unity.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/ParrelSync.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"

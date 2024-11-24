@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 456314044}
   - component: {fileID: 456314046}
   m_Layer: 0
-  m_Name: WaterReflectionPreview Camera
+  m_Name: WaterReflectionPreviewCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

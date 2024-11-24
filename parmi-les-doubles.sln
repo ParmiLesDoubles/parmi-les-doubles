@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fusion.Unity.Editor", "Fusi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fusion.Unity", "Fusion.Unity.csproj", "{1DD1B64F-8359-15EC-E02A-69774DBA8434}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParrelSync", "ParrelSync.csproj", "{E6614B94-C6F7-8056-5809-F94B89EC5285}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fusion.Addons.Physics", "Fusion.Addons.Physics.csproj", "{AE551264-9801-CF92-6A8F-73B2D0135FE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{28215C12-E33F-494A-3E6E-9CDCE4C5DFAA}"
@@ -39,6 +41,10 @@ Global
 		{1DD1B64F-8359-15EC-E02A-69774DBA8434}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DD1B64F-8359-15EC-E02A-69774DBA8434}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DD1B64F-8359-15EC-E02A-69774DBA8434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6614B94-C6F7-8056-5809-F94B89EC5285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6614B94-C6F7-8056-5809-F94B89EC5285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6614B94-C6F7-8056-5809-F94B89EC5285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6614B94-C6F7-8056-5809-F94B89EC5285}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE551264-9801-CF92-6A8F-73B2D0135FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE551264-9801-CF92-6A8F-73B2D0135FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE551264-9801-CF92-6A8F-73B2D0135FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
