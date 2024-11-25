@@ -15,7 +15,7 @@ public class GestionnaireReseau : MonoBehaviour, INetworkRunnerCallbacks
     // Contient la référence au script JoueurReseau du Prefab
     public JoueurReseau joueurPrefab;
     // Contient la référence aux spawn points de la scène du jeu
-    [SerializeField] private Transform[] spawnPoints;
+    public Transform[] spawnPoints;
 
     void Start()
     {
@@ -101,18 +101,17 @@ public class GestionnaireReseau : MonoBehaviour, INetworkRunnerCallbacks
     }
 
     /* Lorsqu'un joueur se connecte au serveur
-     * 1.On vérifie si le code est exécutée sur le serveur. Si c'est le cas, on spawn un prefab de joueur.
+     * 1. On vérifie si le code est exécutée sur le serveur. Si c'est le cas, on spawn un prefab de joueur.
      * Bonne pratique : la commande Spawn() devrait être utilisée seulement par le serveur
     */
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
-
         if (_runner.IsServer)
         {
             // Spawn un joueur lorsqu'il se connecte
             int spawnIndex = UnityEngine.Random.Range(0, spawnPoints.Length);
             Debug.Log("Un joueur s'est connecté comme serveur. Spawn d'un joueur");
-            runner.Spawn(joueurPrefab, spawnPoints[spawnIndex].position, Quaternion.identity, player);
+            runner.Spawn(joueurPrefab, spawnPoints[spawnIndex].position, spawnPoints[spawnIndex].rotation, player);
         }
         else
         {
