@@ -78,13 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.xml" />
-    <None Include="Assets/Environnement/StandardNoCulling.shader" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Common.dll" />
-    <None Include="Assets/Environnement/Ressources/TreeCreator/TreeCreatorBark.shader" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Runtime.xml" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/NanoSockets/Static/NanoSockets.dll" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Sockets.dll" />
-    <None Include="Assets/Environnement/Ressources/TreeCreator/TreeCreatorLeavesOptimized.shader" />
     <None Include="Assets/Photon/Fusion/release_history.txt" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Common.xml" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/NanoSockets/Dynamic/NanoSockets.dll" />
@@ -96,9 +93,6 @@
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Realtime.xml" />
     <None Include="Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/Windows/nanosockets.dll" />
-    <None Include="Assets/Environnement/Ressources/WavingGrass.shader" />
-    <None Include="Assets/Environnement/Ressources/TreeCreator/TreeCreatorBarkOptimized.shader" />
-    <None Include="Assets/Environnement/Ressources/TreeCreator/TreeCreatorLeaves.shader" />
     <None Include="Assets/Photon/Fusion/build_info.txt" />
     <None Include="Assets/Photon/Fusion/Assemblies/Fusion.Realtime.dll" />
     <None Include="Assets/Photon/Fusion/Plugins/NanoSockets/Metro/ARM64/libnanosockets.dll" />
