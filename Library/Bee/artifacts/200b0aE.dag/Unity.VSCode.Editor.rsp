@@ -117,6 +117,10 @@
 -define:FUSION2
 -define:CROSS_PLATFORM_INPUT
 -define:UNITY_POST_PROCESSING_STACK_V2
+-define:PHOTON_UNITY_NETWORKING
+-define:PUN_2_0_OR_NEWER
+-define:PUN_2_OR_NEWER
+-define:PUN_2_19_OR_NEWER
 -define:ROSLYN_ANALYZER_FIX
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
@@ -339,13 +343,7 @@
 -r:"/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Transactions.dll"
 -r:"/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
 -r:"/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
--r:"Assets/Photon/Fusion/Assemblies/Fusion.Common.dll"
--r:"Assets/Photon/Fusion/Assemblies/Fusion.Log.dll"
--r:"Assets/Photon/Fusion/Assemblies/Fusion.Realtime.dll"
--r:"Assets/Photon/Fusion/Assemblies/Fusion.Runtime.dll"
--r:"Assets/Photon/Fusion/Assemblies/Fusion.Sockets.dll"
--r:"Assets/Photon/Fusion/Plugins/NanoSockets/NanoSockets/Dynamic/NanoSockets.dll"
--r:"Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll"
+-r:"Assets/Photon/PhotonLibs/Photon3Unity3D.dll"
 -r:"Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll"
 -r:"Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/log4netPlastic.dll"
 -r:"Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"

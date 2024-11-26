@@ -1,216 +1,111 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using Photon.Pun;
 using UnityEngine;
-using UnityStandardAssets.Utility;
 using UnityStandardAssets.Characters.FirstPerson;
-using Random = UnityEngine.Random;
-using Fusion;
-using Fusion.Sockets;
-using System;
-/*
- * Script qui exécute les déplacements du joueur et ainsi que l'ajustement de direction
- * Dérive de NetworkBehaviour. Utilisation de la fonction réseau FixedUpdateNetwork()
- */
-public class GestionnaireMouvementPersonnage : NetworkBehaviour {
-    [SerializeField] private Animator animator;
-    [SerializeField] private GameObject cameraObject;
-    [SerializeField] private GameObject gunObject;
-    [SerializeField] private GameObject playerObject;
+using System.Collections;
 
-    [Header("Movement Settings")]
-    [SerializeField] private float walkSpeed = 5f;
-    [SerializeField] private float runSpeed = 10f;
-    [SerializeField] private float jumpSpeed = 10f;
-    [SerializeField] private float stickToGroundForce = 5f;
-    [SerializeField] private float gravityMultiplier = 2f;
-    [SerializeField] private bool isWalking;
-    [SerializeField] [Range(0f, 1f)] private float runstepLengthen = 1f;
+[RequireComponent(typeof(FirstPersonController))]
 
-    [Header("Mouse Look Settings")]
-    [SerializeField] private MouseLook mouseLook;
+public class GestionnaireMouvementPersonnage : MonoBehaviourPunCallbacks, IPunObservable {
+    [SerializeField]
+    private Animator animator;
+    [SerializeField]
+    private GameObject cameraObject;
+    [SerializeField]
+    private GameObject gunObject;
+    [SerializeField]
+    private GameObject playerObject;
+    [SerializeField]
+    private NameTag nameTag;
 
-    [Header("Head Bob Settings")]
-    [SerializeField] private bool useHeadBob;
-    [SerializeField] private CurveControlledBob headBob = new CurveControlledBob();
-    [SerializeField] private LerpControlledBob jumpBob = new LerpControlledBob();
-    [SerializeField] private float stepInterval = 5f;
+    private Vector3 position;
+    private Quaternion rotation;
+    private bool jump;
+    private float smoothing = 10.0f;
 
-    [Header("FOV Kick Settings")]
-    [SerializeField] private bool useFovKick;
-    [SerializeField] private FOVKick fovKick = new FOVKick();
+    /// <summary>
+    /// Move game objects to another layer.
+    /// </summary>
+    void MoveToLayer(GameObject gameObject, int layer) {
+        gameObject.layer = layer;
+        foreach(Transform child in gameObject.transform) {
+            MoveToLayer(child.gameObject, layer);
+        }
+    }
 
-    [Header("Audio Settings")]
-    [SerializeField] private AudioClip[] footstepSounds;
-    [SerializeField] private AudioClip jumpSound;
-    [SerializeField] private AudioClip landSound;
-
-    private AudioSource audioSource;
-    private CharacterController characterController;
-    private CollisionFlags collisionFlags;
-    private Vector3 moveDirection = Vector3.zero;
-    private bool previouslyGrounded = true;
-    private bool isJumping = false;
-    private float stepCycle = 0f;
-    private float nextStep = 0f;
-    private Vector3 originalCameraPosition;
-
-    [Networked] private Vector3 Position { get; set; }
-    [Networked] private Quaternion Rotation { get; set; }
-
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
     void Awake() {
-        characterController = GetComponent<CharacterController>();
-        audioSource = GetComponent<AudioSource>();
-    }
-
-    public override void Spawned() {
-        if (Object.HasInputAuthority) {
+        // FirstPersonController script require cameraObject to be active in its Start function.
+        if (photonView.IsMine) {
             cameraObject.SetActive(true);
-            SetLayerRecursively(gunObject, LayerMask.NameToLayer("Hidden"));
-            SetLayerRecursively(playerObject, LayerMask.NameToLayer("Hidden"));
-            mouseLook.Init(transform, cameraObject.transform);
-            originalCameraPosition = cameraObject.transform.localPosition;
+        }
+    }
 
-            if (useFovKick) {
-                Camera mainCamera = cameraObject.GetComponent<Camera>();
-                fovKick.Setup(mainCamera);
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start() {
+        if (photonView.IsMine) {
+            GetComponent<FirstPersonController>().enabled = true;
+            MoveToLayer(gunObject, LayerMask.NameToLayer("Hidden"));
+            MoveToLayer(playerObject, LayerMask.NameToLayer("Hidden"));
+            // Set other player's nametag target to this player's nametag transform.
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            foreach (GameObject player in players) {
+                player.GetComponentInChildren<NameTag>().target = nameTag.transform;
             }
-            headBob.Setup(cameraObject.GetComponent<Camera>(), stepInterval);
         } else {
-            Position = transform.position;
-            Rotation = transform.rotation;
+            position = transform.position;
+            rotation = transform.rotation;
+            // Set this player's nametag target to other players's target.
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            foreach (GameObject player in players) {
+                if (player != gameObject) {
+                    nameTag.target = player.GetComponentInChildren<NameTag>().target;
+                    break;
+                }
+            }
         }
     }
 
-    public override void FixedUpdateNetwork() {
-        if (Object.HasInputAuthority) {
-            HandleInput();
-        } else {
-            SmoothMovement();
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update() {
+        if (!photonView.IsMine) {
+            transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * smoothing);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * smoothing);
         }
     }
 
-    private void HandleInput() {
-        mouseLook.LookRotation(transform, cameraObject.transform);
-
-        float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
-        Vector3 desiredMove = transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal");
-
-        RaycastHit hitInfo;
-        if (Physics.SphereCast(transform.position, characterController.radius, Vector3.down, out hitInfo,
-            characterController.height / 2f, Physics.AllLayers, QueryTriggerInteraction.Ignore)) {
-            desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
-        }
-
-        if (characterController.isGrounded) {
-            moveDirection.y = -stickToGroundForce;
-
+    /// <summary>
+    /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void FixedUpdate() {
+        if (photonView.IsMine) {
+            animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+            animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
             if (Input.GetButtonDown("Jump")) {
-                moveDirection.y = jumpSpeed;
-                PlayJumpSound();
-                isJumping = true;
+                animator.SetTrigger("IsJumping");
             }
+            animator.SetBool("Running", Input.GetKey(KeyCode.LeftShift));
+        }
+    }
+
+    /// <summary>
+    /// Used to customize synchronization of variables in a script watched by a photon network view.
+    /// </summary>
+    /// <param name="stream">The network bit stream.</param>
+    /// <param name="info">The network message information.</param>
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
+        if (stream.IsWriting) {
+            stream.SendNext(transform.position);
+            stream.SendNext(transform.rotation);
         } else {
-            moveDirection += Physics.gravity * gravityMultiplier * Runner.DeltaTime;
-        }
-
-        moveDirection.x = desiredMove.x * speed;
-        moveDirection.z = desiredMove.z * speed;
-
-        collisionFlags = characterController.Move(moveDirection * Runner.DeltaTime);
-
-        HandleFovKick(Input.GetKey(KeyCode.LeftShift));
-        ProgressStepCycle(speed, Input.GetKey(KeyCode.LeftShift));
-        UpdateCameraPosition(speed);
-
-        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
-        animator.SetBool("Running", Input.GetKey(KeyCode.LeftShift));
-        if (Input.GetButtonDown("Jump")) animator.SetTrigger("IsJumping");
-
-        Position = transform.position;
-        Rotation = transform.rotation;
-
-        if (!previouslyGrounded && characterController.isGrounded) {
-            PlayLandingSound();
-            isJumping = false;
-        }
-        previouslyGrounded = characterController.isGrounded;
-
-        mouseLook.UpdateCursorLock();
-    }
-
-    private void SmoothMovement() {
-        transform.position = Vector3.Lerp(transform.position, Position, Runner.DeltaTime * 10f);
-        transform.rotation = Quaternion.Lerp(transform.rotation, Rotation, Runner.DeltaTime * 10f);
-    }
-
-    private void HandleFovKick(bool isRunning) {
-        if (!useFovKick) return;
-
-        if (isRunning && isWalking) {
-            StopAllCoroutines();
-            StartCoroutine(fovKick.FOVKickUp());
-        } else if (!isRunning && !isWalking) {
-            StopAllCoroutines();
-            StartCoroutine(fovKick.FOVKickDown());
-        }
-
-        isWalking = !isRunning;
-    }
-
-    private void ProgressStepCycle(float speed, bool isRunning) {
-        float lengthenFactor = isRunning ? runstepLengthen : 1f;
-
-        if (characterController.velocity.sqrMagnitude > 0 && characterController.isGrounded) {
-            stepCycle += (characterController.velocity.magnitude + (speed * lengthenFactor)) * Runner.DeltaTime;
-        }
-
-        if (!(stepCycle > nextStep)) return;
-
-        nextStep = stepCycle + stepInterval;
-        PlayFootstepAudio();
-    }
-
-    private void UpdateCameraPosition(float speed) {
-        if (!useHeadBob) return;
-
-        Vector3 newCameraPosition;
-        if (characterController.velocity.magnitude > 0 && characterController.isGrounded) {
-            cameraObject.transform.localPosition = headBob.DoHeadBob(characterController.velocity.magnitude + speed);
-            newCameraPosition = cameraObject.transform.localPosition;
-            newCameraPosition.y -= jumpBob.Offset();
-        } else {
-            newCameraPosition = originalCameraPosition;
-            newCameraPosition.y -= jumpBob.Offset();
-        }
-        cameraObject.transform.localPosition = newCameraPosition;
-    }
-
-    private void PlayJumpSound() {
-        audioSource.clip = jumpSound;
-        audioSource.Play();
-    }
-
-    private void PlayLandingSound() {
-        audioSource.clip = landSound;
-        audioSource.Play();
-    }
-
-    private void PlayFootstepAudio() {
-        if (!characterController.isGrounded || footstepSounds.Length == 0) return;
-
-        int n = Random.Range(1, footstepSounds.Length);
-        audioSource.clip = footstepSounds[n];
-        audioSource.PlayOneShot(audioSource.clip);
-
-        footstepSounds[n] = footstepSounds[0];
-        footstepSounds[0] = audioSource.clip;
-    }
-
-    private void SetLayerRecursively(GameObject obj, int newLayer) {
-        obj.layer = newLayer;
-        foreach (Transform child in obj.transform) {
-            SetLayerRecursively(child.gameObject, newLayer);
+            position = (Vector3)stream.ReceiveNext();
+            rotation = (Quaternion)stream.ReceiveNext();
         }
     }
 }

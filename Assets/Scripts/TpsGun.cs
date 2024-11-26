@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
-using Fusion;
 
-public class TpsGun : NetworkBehaviour {
-
-    [Tooltip("The scaling number for changing the local position Y of TpsGun when aiming angle changes.")]
+public class TpsGun : MonoBehaviourPunCallbacks, IPunObservable {
+    [Tooltip("The scaling number for changing the local postion Y of TpsGun when aiming angle changes.")]
     [SerializeField]
     private float localPositionYScale = 0.007f;
     [SerializeField]
@@ -23,8 +20,12 @@ public class TpsGun : NetworkBehaviour {
     private float smoothing = 2.0f;
     private float defaultLocalPositionY;
 
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
     void Start() {
-        if (Object.HasInputAuthority) {
+        if (photonView.IsMine) {
             defaultLocalPositionY = transform.localPosition.y;
         } else {
             localPosition = transform.localPosition;
@@ -32,14 +33,21 @@ public class TpsGun : NetworkBehaviour {
         }
     }
 
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
     void Update() {
-        if (Object.HasInputAuthority) {
+        if (photonView.IsMine) {
             transform.rotation = fpsGun.transform.rotation;
         }
     }
 
+    /// <summary>
+    /// LateUpdate is called every frame, if the Behaviour is enabled.
+    /// It is called after all Update functions have been called.
+    /// </summary>
     void LateUpdate() {
-        if (Object.HasInputAuthority) {
+        if (photonView.IsMine) {
             float deltaEulerAngle = 0f;
             if (transform.eulerAngles.x > 180) {
                 deltaEulerAngle = 360 - transform.eulerAngles.x;
@@ -57,21 +65,41 @@ public class TpsGun : NetworkBehaviour {
         }
     }
 
+    /// <summary>
+    /// Public function to call RPC shoot.
+    /// </summary>
     public void RPCShoot() {
-        if (HasInputAuthority) {
-            // Call an RPC on all clients
-            RPC_Shoot();
+        if (photonView.IsMine) {
+            photonView.RPC("Shoot", RpcTarget.All);
         }
     }
 
-    [Rpc]
-    void RPC_Shoot() {
+    /// <summary>
+    /// RPC function to shoot once.
+    /// </summary>
+    [PunRPC]
+    void Shoot() {
         gunAudio.Play();
-        if (!Object.HasInputAuthority) {
+        if (!photonView.IsMine) {
             if (gunParticles.isPlaying) {
                 gunParticles.Stop();
             }
             gunParticles.Play();
+        }
+    }
+
+    /// <summary>
+    /// Used to customize synchronization of variables in a script watched by a photon network view.
+    /// </summary>
+    /// <param name="stream">The network bit stream.</param>
+    /// <param name="info">The network message information.</param>
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
+        if (stream.IsWriting) {
+            stream.SendNext(transform.localPosition);
+            stream.SendNext(transform.localRotation);
+        } else {
+            localPosition = (Vector3)stream.ReceiveNext();
+            localRotation = (Quaternion)stream.ReceiveNext();
         }
     }
 }

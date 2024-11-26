@@ -3,7 +3,6 @@
 [RequireComponent(typeof(ParticleSystem))]
 
 public class ImpactLifeCycle : MonoBehaviour {
-
     [SerializeField]
     private float lifespan = 1.5f;
 
@@ -17,5 +16,4 @@ public class ImpactLifeCycle : MonoBehaviour {
         GetComponent<ParticleSystem>().Play();
         Destroy(gameObject, lifespan);
     }
-
 }

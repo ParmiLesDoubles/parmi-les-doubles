@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using Photon.Pun;
 using UnityEngine;
-using Fusion;
+using System.Collections;
 
-public class FpsGun : NetworkBehaviour {
+public class FpsGun : MonoBehaviour {
     [SerializeField]
     private int damagePerShot = 20;
     [SerializeField]
@@ -23,16 +22,6 @@ public class FpsGun : NetworkBehaviour {
 
     private float timer;
 
-    // Prefabs for different impact effects
-    [SerializeField] private GameObject impactFleshPrefab;
-    [SerializeField] private GameObject impactMetalPrefab;
-    [SerializeField] private GameObject impactWoodPrefab;
-    [SerializeField] private GameObject impactConcretePrefab;
-    [SerializeField] private GameObject impactWaterPrefab;
-    [SerializeField] private GameObject impactBrickPrefab;
-    [SerializeField] private GameObject impactGlassPrefab;
-    [SerializeField] private GameObject impactDirtPrefab;
-
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -46,7 +35,7 @@ public class FpsGun : NetworkBehaviour {
     /// </summary>
     void Update() {
         timer += Time.deltaTime;
-        bool shooting = Input.GetButtonDown("Fire1");
+        bool shooting = Input.GetButton("Fire1");
         if (shooting && timer >= timeBetweenBullets && Time.timeScale != 0) {
             Shoot();
         }
@@ -69,42 +58,15 @@ public class FpsGun : NetworkBehaviour {
         Ray shootRay = raycastCamera.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2, 0f));
         if (Physics.Raycast(shootRay, out shootHit, weaponRange, LayerMask.GetMask("Shootable"))) {
             string hitTag = shootHit.transform.gameObject.tag;
-            GameObject impactPrefab;
-
-        // Use a switch statement to select the correct prefab based on the hitTag
-        switch (hitTag)
-        {
-            case "Player":
-                impactPrefab = impactFleshPrefab;
-                break;
-            case "Metal":
-                impactPrefab = impactMetalPrefab;
-                break;
-            case "Wood":
-                impactPrefab = impactWoodPrefab;
-                break;
-            case "Concrete":
-                impactPrefab = impactConcretePrefab;
-                break;
-            case "Water":
-                impactPrefab = impactWaterPrefab;
-                break;
-            case "Brick":
-                impactPrefab = impactBrickPrefab;
-                break;
-            case "Glass":
-                impactPrefab = impactGlassPrefab;
-                break;
-            case "Dirt":
-                impactPrefab = impactDirtPrefab;
-                break;
-            default:
-                impactPrefab = impactDirtPrefab;
-                break;
-        }
-
-        // Spawn the selected prefab using Runner.Spawn
-        Runner.Spawn(impactPrefab, shootHit.point, Quaternion.Euler(shootHit.normal.x - 90, shootHit.normal.y, shootHit.normal.z));
+            switch (hitTag) {
+                case "Player":
+                    shootHit.collider.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, damagePerShot, PhotonNetwork.LocalPlayer.NickName);
+                    PhotonNetwork.Instantiate("ImpactFlesh", shootHit.point, Quaternion.Euler(shootHit.normal.x - 90, shootHit.normal.y, shootHit.normal.z), 0);
+                    break;
+                default:
+                    PhotonNetwork.Instantiate("Impact" + hitTag, shootHit.point, Quaternion.Euler(shootHit.normal.x - 90, shootHit.normal.y, shootHit.normal.z), 0);
+                    break;
+            }
         }
         tpsGun.RPCShoot();  // RPC for third person view
     }

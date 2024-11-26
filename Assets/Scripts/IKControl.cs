@@ -3,7 +3,6 @@
 [RequireComponent(typeof(Animator))]
 
 public class IKControl : MonoBehaviour {
-
     [SerializeField]
     private bool ikActive = false;
     [SerializeField]
@@ -74,5 +73,4 @@ public class IKControl : MonoBehaviour {
             animator.SetLookAtWeight(0);
         }
     }
-
 }

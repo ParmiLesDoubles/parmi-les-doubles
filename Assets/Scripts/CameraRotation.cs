@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 public class CameraRotation : MonoBehaviour {
-
     [SerializeField]
     private Transform lookPoint;
     [SerializeField]
@@ -14,5 +13,4 @@ public class CameraRotation : MonoBehaviour {
         transform.RotateAround(lookPoint.position, Vector3.up, rotateSpeed * Time.deltaTime);
         transform.LookAt(lookPoint, Vector3.up);
     }
-
 }

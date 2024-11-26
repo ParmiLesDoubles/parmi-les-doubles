@@ -3,7 +3,6 @@
 [RequireComponent(typeof(Animator))]
 
 public class DoorAnimation : MonoBehaviour {
-
     [SerializeField]
     private float minPosY = 2.74f;
     [SerializeField]
@@ -50,5 +49,4 @@ public class DoorAnimation : MonoBehaviour {
             animator.SetBool("Trigger", false);
         }
     }
-
 }
