@@ -59,7 +59,7 @@
     <UnityVersion>2022.3.42f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/phosphora/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.4/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/phosphora/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.5/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -1036,16 +1036,16 @@
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
@@ -1109,8 +1109,9 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj" />
-    <ProjectReference Include="PhotonWebSocket.csproj" />
+    <ProjectReference Include="ParrelSync.csproj" />
     <ProjectReference Include="PhotonChat.csproj" />
+    <ProjectReference Include="PhotonWebSocket.csproj" />
     <ProjectReference Include="PhotonRealtime.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj" />

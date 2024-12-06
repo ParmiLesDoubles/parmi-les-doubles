@@ -1,162 +1,197 @@
-using Photon.Pun;
-using Photon.Realtime;
-using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Realtime;
+
+// Script qui contrôle l'ensemble de la connexion réseau.
+// PhotonView = NetworkObject
+// PhotonNetwork = SimulationBehaviour.Runner et SimulationBehaviour.Object
 
 public class NetworkManager : MonoBehaviourPunCallbacks {
+    // Texte de connexion
     [SerializeField]
-    private Text connectionText;
+    private Text texteConnexion;
+
+    // Points de spawn où le joueur peut spawn de manière aléatoire
     [SerializeField]
     private Transform[] spawnPoints;
+
+    // Caméra de la scène
     [SerializeField]
     private Camera sceneCamera;
+
+    // Prefab du joueur
     [SerializeField]
     private GameObject joueurPrefab;
+
+    // Fenêtre de connexion
     [SerializeField]
     private GameObject serverWindow;
+
+    // Panneau de messages
     [SerializeField]
     private GameObject messageWindow;
+
+    // Réticule de visée
     [SerializeField]
-    private GameObject sightImage;
+    private GameObject cibleTir;
+
+    // InputField pour le nom du joueur
     [SerializeField]
-    private InputField username;
+    private InputField nomJoueur;
+
+    // InputField pour le nom de la salle à créer ou à rejoindre
     [SerializeField]
-    private InputField roomName;
+    private InputField nomSalle;
+
+    // InputField pour la liste des salles
     [SerializeField]
-    private InputField roomList;
+    private InputField listeSalle;
+
+    // InputField pour le log des messages
     [SerializeField]
     private InputField messagesLog;
-    private GameObject player;
+
+    // Variable pour le joueur
+    private GameObject joueur;
+
+    // Variable pour les messages
     private Queue<string> messages;
-    private const int messageCount = 10;
-    private string nickNamePrefKey = "PlayerName";
+
+    // Nombre de messages
+    private const int nombreMessages = 10;
+
+    // Pour mémoriser le nom d'utilisateur du joueur pour une utilisation ultérieure
+    private string nickNamePrefKey = "NomJoueur";
 
     /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
+    /// Start is called before the first frame update.
     /// </summary>
     void Start() {
-        messages = new Queue<string> (messageCount);
+        messages = new Queue<string> (nombreMessages);
         if (PlayerPrefs.HasKey(nickNamePrefKey)) {
-            username.text = PlayerPrefs.GetString(nickNamePrefKey);
+            nomJoueur.text = PlayerPrefs.GetString(nickNamePrefKey);
         }
         PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.ConnectUsingSettings();
-        connectionText.text = "Connexion au foyer...";
+        texteConnexion.text = "Connexion au foyer...";
     }
 
     /// <summary>
-    /// Called on the client when you have successfully connected to a master server.
+    /// Fonction appelée lorsque vous avez réussi à vous connecter
+    /// à un master server (serveur maître).
     /// </summary>
     public override void OnConnectedToMaster() {
         PhotonNetwork.JoinLobby();
     }
 
     /// <summary>
-    /// Called on the client when the connection was lost or you disconnected from the server.
+    /// Fonction appelée lorsque la connexion a été perdue
+    /// ou que vous vous êtes déconnecté du serveur.
     /// </summary>
-    /// <param name="cause">DisconnectCause data associated with this disconnect.</param>
+    /// <param name="cause">Données de DisconnectCause associées à cette déconnexion.</param>
     public override void OnDisconnected(DisconnectCause cause) {
-        connectionText.text = cause.ToString();
+        texteConnexion.text = cause.ToString();
     }
 
     /// <summary>
-    /// Callback function on joined lobby.
+    /// Fonction appelée lorsque vous entrez dans un lobby
+    /// sur le master server (serveur maître).
     /// </summary>
     public override void OnJoinedLobby() {
         serverWindow.SetActive(true);
-        connectionText.text = "";
+        texteConnexion.text = "";
     }
 
     /// <summary>
-    /// Callback function on reveived room list update.
+    /// Fonction appelée pour la mise à jour de la liste des salles.
     /// </summary>
-    /// <param name="rooms">List of RoomInfo.</param>
+    /// <param name="rooms">List de RoomInfo.</param>
     public override void OnRoomListUpdate(List<RoomInfo> rooms) {
-        roomList.text = "";
+        listeSalle.text = "";
         foreach (RoomInfo room in rooms) {
-            roomList.text += room.Name + "\n";
+            listeSalle.text += room.Name + "\n";
         }
     }
 
     /// <summary>
-    /// The button click callback function for join room.
+    /// Fonction appelée pour rejoindre le room (la salle).
     /// </summary>
     public void JoinRoom() {
         serverWindow.SetActive(false);
-        connectionText.text = "Rejoindre la salle...";
-        PhotonNetwork.LocalPlayer.NickName = username.text;
-        PlayerPrefs.SetString(nickNamePrefKey, username.text);
+        texteConnexion.text = "Rejoindre la salle...";
+        PhotonNetwork.LocalPlayer.NickName = nomJoueur.text;
+        PlayerPrefs.SetString(nickNamePrefKey, nomJoueur.text);
         RoomOptions roomOptions = new RoomOptions() {
             IsVisible = true,
             MaxPlayers = 8
         };
         if (PhotonNetwork.IsConnectedAndReady) {
-            PhotonNetwork.JoinOrCreateRoom(roomName.text, roomOptions, TypedLobby.Default);
+            PhotonNetwork.JoinOrCreateRoom(nomSalle.text, roomOptions, TypedLobby.Default);
         } else {
-            connectionText.text = "La connexion à PhotonNetwork n'est pas prête. Essayez de la redémarrer.";
+            texteConnexion.text = "La connexion à PhotonNetwork n'est pas prête. Essayez de la redémarrer.";
         }
     }
 
     /// <summary>
-    /// Callback function on joined room.
+    /// Fonction appelée lorsque vous entrez dans un room (une salle).
     /// </summary>
     public override void OnJoinedRoom() {
-        connectionText.text = "";
+        texteConnexion.text = "";
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Respawn(0.0f);
     }
 
     /// <summary>
-    /// Start spawn or respawn a player.
+    /// Fonction appelée pour démarrer le spawn ou le respawn d'un joueur.
     /// </summary>
-    /// <param name="spawnTime">Time waited before spawn a player.</param>
-    void Respawn(float spawnTime) {
-        sightImage.SetActive(false);
+    /// <param name="tempsSpawn">Temps d'attente avant le spawn d'un joueur.</param>
+    void Respawn(float tempsSpawn) {
+        cibleTir.SetActive(false);
         sceneCamera.enabled = true;
-        StartCoroutine(RespawnCoroutine(spawnTime));
+        StartCoroutine(RespawnCoroutine(tempsSpawn));
     }
 
     /// <summary>
-    /// The coroutine function to spawn player.
+    /// Fonction coroutine pour faire apparaître le joueur.
     /// </summary>
-    /// <param name="spawnTime">Time waited before spawn a player.</param>
-    IEnumerator RespawnCoroutine(float spawnTime) {
-        yield return new WaitForSeconds(spawnTime);
+    /// <param name="tempsSpawn">Temps d'attente avant le spawn d'un joueur.</param>
+    IEnumerator RespawnCoroutine(float tempsSpawn) {
+        yield return new WaitForSeconds(tempsSpawn);
         messageWindow.SetActive(true);
-        sightImage.SetActive(true);
+        cibleTir.SetActive(true);
         int spawnIndex = Random.Range(0, spawnPoints.Length);
-        player = PhotonNetwork.Instantiate(joueurPrefab.name, spawnPoints[spawnIndex].position, spawnPoints[spawnIndex].rotation, 0);
-        GestionnairePointsDeVie gestionnairePointsDeVie = player.GetComponent<GestionnairePointsDeVie>();
+        joueur = PhotonNetwork.Instantiate(joueurPrefab.name, spawnPoints[spawnIndex].position, spawnPoints[spawnIndex].rotation, 0);
+        GestionnairePointsDeVie gestionnairePointsDeVie = joueur.GetComponent<GestionnairePointsDeVie>();
         gestionnairePointsDeVie.RespawnEvent += Respawn;
-        gestionnairePointsDeVie.AddMessageEvent += AddMessage;
+        gestionnairePointsDeVie.AjouterMessageEvent += AjouterMessage;
         sceneCamera.enabled = false;
-        if (spawnTime == 0) {
-            AddMessage(PhotonNetwork.LocalPlayer.NickName + " a rejoint le jeu.");
+        if (tempsSpawn == 0) {
+            AjouterMessage(PhotonNetwork.LocalPlayer.NickName + " a rejoint le jeu.");
         } else {
-            AddMessage(PhotonNetwork.LocalPlayer.NickName + " a réapparu.");
+            AjouterMessage(PhotonNetwork.LocalPlayer.NickName + " a réapparu.");
         }
     }
 
     /// <summary>
-    /// Add message to message panel.
+    /// Fonction appelée pour ajouter un message au panel de messages.
     /// </summary>
-    /// <param name="message">The message that we want to add.</param>
-    void AddMessage(string message) {
-        photonView.RPC("AddMessage_RPC", RpcTarget.All, message);
+    /// <param name="message">Le message que l'on veut ajouter.</param>
+    void AjouterMessage(string message) {
+        photonView.RPC("AjouterMessage_RPC", RpcTarget.All, message);
     }
 
     /// <summary>
-    /// RPC function to call add message for each client.
+    /// Fonction RPC pour appeler la fonction AjouterMessage pour chaque client.
     /// </summary>
-    /// <param name="message">The message that we want to add.</param>
+    /// <param name="message">Le message que l'on veut ajouter.</param>
     [PunRPC]
-    void AddMessage_RPC(string message) {
+    void AjouterMessage_RPC(string message) {
         messages.Enqueue(message);
-        if (messages.Count > messageCount) {
+        if (messages.Count > nombreMessages) {
             messages.Dequeue();
         }
         messagesLog.text = "";
@@ -166,11 +201,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks {
     }
 
     /// <summary>
-    /// Callback function when other player disconnected.
+    /// Fonction appelée lorsqu'un autre joueur se déconnecte.
     /// </summary>
-    public override void OnPlayerLeftRoom(Player other) {
+    public override void OnPlayerLeftRoom(Player autre) {
         if (PhotonNetwork.IsMasterClient) {
-            AddMessage(other.NickName + " a quitté le jeu.");
+            AjouterMessage(autre.NickName + " a quitté le jeu.");
         }
     }
 }

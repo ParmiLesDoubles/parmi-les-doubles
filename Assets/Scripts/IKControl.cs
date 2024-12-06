@@ -1,64 +1,81 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 
+// Script qui assure que le personnage tient une arme,
+// quels que soient les mouvements ou les rotations.
+
 public class IKControl : MonoBehaviour {
+    // Pour déterminer si l'IK est actif ou inactif
     [SerializeField]
     private bool ikActive = false;
+
+    // Où se trouve la main droite du personnage
     [SerializeField]
     private Transform rightHandObj = null;
+
+    // Où se trouve la main gauche du personnage
     [SerializeField]
     private Transform leftHandObj = null;
+
+    // Où se trouve le coude droit du personnage
     [SerializeField]
     private Transform rightElbowObj = null;
+
+    // Où se trouve le coude gauche du personnage
     [SerializeField]
     private Transform leftElbowObj = null;
+
+    // Où le personnage regarde
     [SerializeField]
     private Transform lookObj = null;
 
+    // Animator du personnage
     private Animator animator;
 
     /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
+    /// Start is called before the first frame update.
     /// </summary>
     void Start() {
         animator = GetComponent<Animator>();
     }
 
     /// <summary>
-    /// Callback for setting up animation IK (inverse kinematics).
+    /// Fonction callback pour la mise en place de l'animation IK (Inverse Kinematics).
     /// </summary>
-    /// <param name="layerIndex">Index of the layer on which the IK solver is called.</param>
+    /// <param name="layerIndex">Index du layer sur laquelle le solveur IK est appelé.</param>
     void OnAnimatorIK(int layerIndex) {
-        // If the IK is active, set the position and rotation directly to the goal.
-        // If the IK is not active, set the position and rotation of the hand and head back to the original position.
+        // Si l'IK est actif, définir la position et la rotation directement vers le but.
+        // Si l'IK n'est pas actif, remettre la position et la rotation des parties
+        // du corps du personnage dans la position d'origine.
         if (ikActive) {
-            // Set the look target position, if one has been assigned.
+            // Définir la position de la cible du regard si elle a été attribuée.
             if (lookObj != null) {
                 animator.SetLookAtWeight(1);
                 animator.SetLookAtPosition(lookObj.position);
             }
-            // Set the right hand target position and rotation, if one has been assigned.
+            // Définir la position et la rotation de la main droite si elle a été assignée.
             if (rightHandObj != null) {
                 animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
                 animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
                 animator.SetIKPosition(AvatarIKGoal.RightHand, rightHandObj.position);
                 animator.SetIKRotation(AvatarIKGoal.RightHand, rightHandObj.rotation);
             }
-            // Set the left hand target position and rotation, if one has been assigned.
+            // Définir la position et la rotation de la main gauche si elle a été assignée.
             if (leftHandObj != null) {
                 animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
                 animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
                 animator.SetIKPosition(AvatarIKGoal.LeftHand, leftHandObj.position);
                 animator.SetIKRotation(AvatarIKGoal.LeftHand, leftHandObj.rotation);
             }
-            // Set the right elbow target position and rotation, if one has been assigned.
+            // Définir la position et la rotation du coude droit s'il a été assigné.
             if (rightElbowObj != null) {
                 animator.SetIKHintPositionWeight(AvatarIKHint.RightElbow, 1);
                 animator.SetIKHintPosition(AvatarIKHint.RightElbow, rightElbowObj.position);
             }
-            // Set the left elbow target position and rotation, if one has been assigned.
+            // Définir la position et la rotation du coude gauche s'il a été assigné.
             if (leftElbowObj != null) {
                 animator.SetIKHintPositionWeight(AvatarIKHint.LeftElbow, 1);
                 animator.SetIKHintPosition(AvatarIKHint.LeftElbow, leftElbowObj.position);

@@ -59,7 +59,7 @@
     <UnityVersion>2022.3.42f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/phosphora/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.4/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/phosphora/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.5/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -102,8 +102,8 @@
     <Compile Include="Assets/Standard Assets/ParticleSystems/Scripts/WaterHoseParticles.cs" />
     <Compile Include="Assets/Standard Assets/Utility/CameraRefocus.cs" />
     <Compile Include="Assets/Standard Assets/Utility/TimedObjectActivator.cs" />
-    <Compile Include="Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" />
     <Compile Include="Assets/Standard Assets/ParticleSystems/Scripts/ParticleSystemMultiplier.cs" />
+    <Compile Include="Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" />
     <Compile Include="Assets/Standard Assets/CrossPlatformInput/Scripts/AxisTouchButton.cs" />
     <Compile Include="Assets/Standard Assets/Environment/Water/Water/Scripts/MeshContainer.cs" />
     <Compile Include="Assets/Standard Assets/Cameras/Scripts/HandHeldCam.cs" />
@@ -1056,16 +1056,16 @@
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
@@ -1128,8 +1128,9 @@
   <ItemGroup>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj" />
-    <ProjectReference Include="PhotonWebSocket.csproj" />
+    <ProjectReference Include="ParrelSync.csproj" />
     <ProjectReference Include="PhotonChat.csproj" />
+    <ProjectReference Include="PhotonWebSocket.csproj" />
     <ProjectReference Include="PhotonRealtime.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj" />

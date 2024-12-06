@@ -1,157 +1,186 @@
-using Photon.Pun;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
-using System.Collections;
 
 [RequireComponent(typeof(FirstPersonController))]
 [RequireComponent(typeof(Rigidbody))]
 
-public class GestionnairePointsDeVie : MonoBehaviourPunCallbacks, IPunObservable {
-    public delegate void Respawn(float time);
-    public delegate void AddMessage(string Message);
-    public event Respawn RespawnEvent;
-    public event AddMessage AddMessageEvent;
+// Script qui gère les dommages et la mort quand un joueur est touché.
+// Les delegates sont essentiellement des conteneurs pour les fonctions.
+// Ils permettent de stocker et d'appeler une fonction
+// comme s'il s'agissait d'une variable.
+// Dans Unity, un event est un type particulier de delegate
+// que vous pouvez utiliser pour déclencher des actions dans votre code.
+// PhotonView = NetworkObject
+// photonView.IsMine = Object.HasInputAuthority et Object.HasStateAuthority
+// PhotonNetwork = SimulationBehaviour.Runner et SimulationBehaviour.Object
 
+public class GestionnairePointsDeVie : MonoBehaviourPunCallbacks, IPunObservable {
+    // Delegate pour la fonction Respawn qui est dans le script NetworkManager
+    public delegate void Respawn(float temps);
+
+    // Delegate pour la fonction AjouterMessage qui est dans le script NetworkManager
+    public delegate void AjouterMessage(string Message);
+
+    // Event pour la fonction Respawn qui est dans le script NetworkManager
+    public event Respawn RespawnEvent;
+
+    // Event pour la fonction AjouterMessage qui est dans le script NetworkManager
+    public event AjouterMessage AjouterMessageEvent;
+
+    // Nombre de points de vie au commencement ou après un respawn
     [SerializeField]
-    private int startingHealth = 100;
+    private int ptsVieDepart = 100;
+
+    // Vitesse d'immersion du cadavre d'un joueur mort
     [SerializeField]
-    private float sinkSpeed = 0.12f;
+    private float vitesseCouler = 0.08f;
+
+    // Temps d'immersion du cadavre d'un joueur mort
     [SerializeField]
-    private float sinkTime = 2.5f;
+    private float tempsCouler = 2.5f;
+
+    // Temps de respawn
     [SerializeField]
-    private float respawnTime = 8.0f;
+    private float tempsRespawn = 8.0f;
+
+    // Son qui joue lorsqu'un joueur meurt
     [SerializeField]
-    private AudioClip deathClip;
+    private AudioClip mortAudio;
+
+    // Son qui joue lorsqu'un joueur subit des dommages
     [SerializeField]
-    private AudioClip hurtClip;
+    private AudioClip dommageAudio;
     [SerializeField]
-    private AudioSource playerAudio;
+    private AudioSource joueurAudio;
     [SerializeField]
-    private float flashSpeed = 2f;
+    private float vitesseFlash = 2f;
     [SerializeField]
-    private Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+    private Color couleurFlash = new Color(1f, 0f, 0f, 0.1f);
     [SerializeField]
     private NameTag nameTag;
     [SerializeField]
     private Animator animator;
 
-    private FirstPersonController fpController;
+    private FirstPersonController firstPersonController;
     private IKControl ikControl;
-    private Slider healthSlider;
+    private Slider ptsVieSlider;
     private Image damageImage;
-    private int currentHealth;
-    private bool isDead;
-    private bool isSinking;
-    private bool damaged;
+    private int ptsVie;
+    private bool estMort;
+    private bool coule;
+    private bool dommage;
 
     /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
+    /// Start is called before the first frame update.
     /// </summary>
     void Start() {
-        fpController = GetComponent<FirstPersonController>();
+        firstPersonController = GetComponent<FirstPersonController>();
         ikControl = GetComponentInChildren<IKControl>();
-        damageImage = GameObject.FindGameObjectWithTag("CanvasJoueur").transform.Find("DamageImage").GetComponent<Image>();
-        healthSlider = GameObject.FindGameObjectWithTag("CanvasJoueur").GetComponentInChildren<Slider>();
-        currentHealth = startingHealth;
+        damageImage = GameObject.FindGameObjectWithTag("Screen").transform.Find("DamageImage").GetComponent<Image>();
+        ptsVieSlider = GameObject.FindGameObjectWithTag("Screen").GetComponentInChildren<Slider>();
+        ptsVie = ptsVieDepart;
         if (photonView.IsMine) {
             gameObject.layer = LayerMask.NameToLayer("JoueurFPS");
-            healthSlider.value = currentHealth;
+            ptsVieSlider.value = ptsVie;
         }
-        damaged = false;
-        isDead = false;
-        isSinking = false;
+        dommage = false;
+        estMort = false;
+        coule = false;
     }
 
     /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// Update is called once per frame.
     /// </summary>
     void Update() {
-        if (damaged) {
-            damaged = false;
-            damageImage.color = flashColour;
+        if (dommage) {
+            dommage = false;
+            damageImage.color = couleurFlash;
         } else {
-            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+            damageImage.color = Color.Lerp(damageImage.color, Color.clear, vitesseFlash * Time.deltaTime);
         }
-        if (isSinking) {
-            transform.Translate(Vector3.down * sinkSpeed * Time.deltaTime);
+        if (coule) {
+            transform.Translate(Vector3.down * vitesseCouler * Time.deltaTime);
         }
     }
 
     /// <summary>
-    /// RPC function to let the player take damage.
+    /// Fonction RPC permettant au joueur de subir des dommages.
     /// </summary>
-    /// <param name="amount">Amount of damage dealt.</param>
-    /// <param name="enemyName">Enemy's name who cause this player's death.</param>
+    /// <param name="quantite">Quantité de dommages subis.</param>
+    /// <param name="nomEnnemi">Nom de l'ennemi qui a causé la mort de ce joueur.</param>
     [PunRPC]
-    public void TakeDamage(int amount, string enemyName) {
-        if (isDead) return;
+    public void PrendreDommages(int quantite, string nomEnnemi) {
+        if (estMort) return;
         if (photonView.IsMine) {
-            damaged = true;
-            currentHealth -= amount;
-            if (currentHealth <= 0) {
-                photonView.RPC("Death", RpcTarget.All, enemyName);
+            dommage = true;
+            ptsVie -= quantite;
+            if (ptsVie <= 0) {
+                photonView.RPC("Mort", RpcTarget.All, nomEnnemi);
             }
-            healthSlider.value = currentHealth;
+            ptsVieSlider.value = ptsVie;
             animator.SetTrigger("IsHurt");
         }
-        playerAudio.clip = hurtClip;
-        playerAudio.Play();
+        joueurAudio.clip = dommageAudio;
+        joueurAudio.Play();
     }
 
     /// <summary>
-    /// RPC function to declare death of player.
+    /// Fonction RPC permettant de déclarer la mort d'un joueur.
     /// </summary>
-    /// <param name="enemyName">Enemy's name who cause this player's death.</param>
+    /// <param name="nomEnnemi">Nom de l'ennemi qui a causé la mort d'un joueur.</param>
     [PunRPC]
-    void Death(string enemyName) {
-        isDead = true;
+    void Mort(string nomEnnemi) {
+        estMort = true;
         ikControl.enabled = false;
         nameTag.gameObject.SetActive(false);
         if (photonView.IsMine) {
-            fpController.enabled = false;
+            firstPersonController.enabled = false;
             animator.SetTrigger("IsDead");
-            AddMessageEvent(PhotonNetwork.LocalPlayer.NickName + " a été tué par " + enemyName + " !");
-            RespawnEvent(respawnTime);
-            StartCoroutine("DestoryPlayer", respawnTime);
+            AjouterMessageEvent(PhotonNetwork.LocalPlayer.NickName + " a été tué par " + nomEnnemi + " !");
+            RespawnEvent(tempsRespawn);
+            StartCoroutine("DestoryJoueur", tempsRespawn);
         }
-        playerAudio.clip = deathClip;
-        playerAudio.Play();
-        StartCoroutine("StartSinking", sinkTime);
+        joueurAudio.clip = mortAudio;
+        joueurAudio.Play();
+        StartCoroutine("CommencerCouler", tempsCouler);
     }
 
     /// <summary>
-    /// Coroutine function to destory player game object.
+    /// Enumarator pour détruire le joueur prefab
     /// </summary>
-    /// <param name="delayTime">Delay time before destory.</param>
-    IEnumerator DestoryPlayer(float delayTime) {
-        yield return new WaitForSeconds(delayTime);
+    /// <param name="delaiDestroy">Délai avant destroy</param>
+    IEnumerator DestoryJoueur(float delaiDestroy) {
+        yield return new WaitForSeconds(delaiDestroy);
         PhotonNetwork.Destroy(gameObject);
     }
 
     /// <summary>
-    /// RPC function to start sinking the player game object.
+    /// Enumarator permettant de commencer à couler le joueur prefab.
     /// </summary>
-    /// <param name="delayTime">Delay time before start sinking.</param>
-    IEnumerator StartSinking(float delayTime) {
-        yield return new WaitForSeconds(delayTime);
+    /// <param name="delaiCouler">Délai avant de commencer à couler.</param>
+    IEnumerator CommencerCouler(float delaiCouler) {
+        yield return new WaitForSeconds(delaiCouler);
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.useGravity = false;
         rigidbody.isKinematic = false;
-        isSinking = true;
+        coule = true;
     }
 
     /// <summary>
-    /// Used to customize synchronization of variables in a script watched by a photon network view.
+    /// Permet de personnaliser la synchronisation des variables
+    /// dans un script surveillé par un Photon Network View.
     /// </summary>
-    /// <param name="stream">The network bit stream.</param>
-    /// <param name="info">The network message information.</param>
+    /// <param name="stream">Le flux binaire du réseau.</param>
+    /// <param name="info">Les informations sur le message réseau.</param>
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
         if (stream.IsWriting) {
-            stream.SendNext(currentHealth);
+            stream.SendNext(ptsVie);
         } else {
-            currentHealth = (int)stream.ReceiveNext();
+            ptsVie = (int)stream.ReceiveNext();
         }
     }
 }

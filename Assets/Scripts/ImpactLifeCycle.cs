@@ -1,16 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(ParticleSystem))]
 
+// Script qui détruit la balle qui a été tirée après quelques secondes
+// pour économiser le temps CPU et la mémoire.
+
 public class ImpactLifeCycle : MonoBehaviour {
+    // Durée de vie de la balle qui a été tirée
     [SerializeField]
     private float lifespan = 1.5f;
 
-    private ParticleSystem particleEffect;
-
     /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
+    /// Start is called before the first frame update.
     /// </summary>
     void Start() {
         GetComponent<ParticleSystem>().Play();

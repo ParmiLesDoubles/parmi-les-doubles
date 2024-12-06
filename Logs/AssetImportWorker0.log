@@ -2,8 +2,8 @@ Unity Editor version:    2022.3.42f1 (2dcb6a0abc42)
 Branch:                  2022.3/staging
 Build type:              Release
 Batch mode:              YES
-macOS version:           Version 14.2.1 (Build 23C71)
-Darwin version:          23.2.0
+macOS version:           Version 15.1.1 (Build 24B91)
+Darwin version:          24.1.0
 Architecture:            arm64
 Running under Rosetta:   NO
 Available memory:        16384 MB
@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50981
+50989
 Successfully changed project path to: /Users/phosphora/Documents/GitHub/parmi-les-doubles
 /Users/phosphora/Documents/GitHub/parmi-les-doubles
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -56,14 +56,14 @@ Successfully changed project path to: /Users/phosphora/Documents/GitHub/parmi-le
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8101285888]  Target information:
+Player connection [8646359104]  Target information:
 
-Player connection [8101285888]  * "[IP] 192.168.1.22 [Port] 0 [Flags] 2 [Guid] 34188495 [EditorId] 34188495 [Version] 1048832 [Id] OSXEditor(0,MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8646359104]  * "[IP] 192.168.1.37 [Port] 0 [Flags] 2 [Guid] 525447258 [EditorId] 525447258 [Version] 1048832 [Id] OSXEditor(0,MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
-Player connection [8101285888] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [8101285888] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8646359104] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8646359104] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-Refreshing native plugins compatible for Editor in 10.72 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 13.92 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.42f1 (2dcb6a0abc42)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -78,50 +78,50 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56363
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56218
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.42f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.42f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.42f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003349 seconds.
-- Loaded All Assemblies, in  0.258 seconds
+Registered in 0.005317 seconds.
+- Loaded All Assemblies, in  0.288 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 91 ms
+Android Extension - Scanning For ADB Devices 89 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.352 seconds
-Domain Reload Profiling: 611ms
-	BeginReloadAssembly (54ms)
+- Finished resetting the current domain, in  0.363 seconds
+Domain Reload Profiling: 650ms
+	BeginReloadAssembly (76ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
+		CreateAndSetChildDomain (0ms)
 	RebuildCommonClasses (29ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (124ms)
-		LoadAssemblies (54ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (131ms)
+		LoadAssemblies (77ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (122ms)
-			TypeCache.Refresh (121ms)
-				TypeCache.ScanAssembly (109ms)
+		AnalyzeDomain (128ms)
+			TypeCache.Refresh (127ms)
+				TypeCache.ScanAssembly (116ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (352ms)
+	FinalizeReload (363ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (314ms)
+		SetupLoadedEditorAssemblies (325ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (199ms)
+			InitializePlatformSupportModulesInManaged (206ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (79ms)
+			ProcessInitializeOnLoadAttributes (82ms)
 			ProcessInitializeOnLoadMethodAttributes (32ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -131,7 +131,7 @@ Domain Reload Profiling: 611ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.504 seconds
+- Loaded All Assemblies, in  0.558 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
@@ -141,605 +141,108 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.578 seconds
-Domain Reload Profiling: 1082ms
-	BeginReloadAssembly (93ms)
+- Finished resetting the current domain, in  0.490 seconds
+Domain Reload Profiling: 1049ms
+	BeginReloadAssembly (95ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (23ms)
+		CreateAndSetChildDomain (21ms)
 	RebuildCommonClasses (30ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (31ms)
-	LoadAllAssembliesAndSetupDomain (341ms)
-		LoadAssemblies (204ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (393ms)
+		LoadAssemblies (265ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (176ms)
-			TypeCache.Refresh (158ms)
-				TypeCache.ScanAssembly (141ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (154ms)
+				TypeCache.ScanAssembly (135ms)
 			ScanForSourceGeneratedMonoScriptInfo (11ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (578ms)
+	FinalizeReload (491ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (429ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (44ms)
-			ProcessInitializeOnLoadAttributes (348ms)
-			ProcessInitializeOnLoadMethodAttributes (14ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (2ms)
-Launching external process: /Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.06 seconds
-Refreshing native plugins compatible for Editor in 3.08 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 45 unused Assets / (2.2 MB). Loaded Objects now: 3910.
-Memory consumption went from 171.7 MB to 169.5 MB.
-Total: 3.242792 ms (FindLiveObjects: 0.129708 ms CreateObjectMapping: 0.061916 ms MarkObjects: 2.682042 ms  DeleteObjects: 0.368750 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 12691.014958 seconds.
-  path: Assets/Standard Assets/Characters/FirstPersonCharacter
-  artifactKey: Guid(943e057eaae705e43b9e9b2e53d6adb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Standard Assets/Characters/FirstPersonCharacter using Guid(943e057eaae705e43b9e9b2e53d6adb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '2e847c3c61f5afb217641e588abbe17e') in 0.001196 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 11.214819 seconds.
-  path: Assets/Standard Assets
-  artifactKey: Guid(c6195a43a0187a34e9c6be23520d3766) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Standard Assets using Guid(c6195a43a0187a34e9c6be23520d3766) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '85bea96c18ab95cac0266b02c7de4fba') in 0.000513 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-Thread 0x28e187000 may have been prematurely finalized
-- Loaded All Assemblies, in  0.354 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.529 seconds
-Domain Reload Profiling: 882ms
-	BeginReloadAssembly (99ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (38ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (18ms)
-	LoadAllAssembliesAndSetupDomain (197ms)
-		LoadAssemblies (167ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (64ms)
-			TypeCache.Refresh (53ms)
-				TypeCache.ScanAssembly (43ms)
-			ScanForSourceGeneratedMonoScriptInfo (6ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (529ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (310ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (16ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (41ms)
-			ProcessInitializeOnLoadAttributes (237ms)
-			ProcessInitializeOnLoadMethodAttributes (12ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (2ms)
-Refreshing native plugins compatible for Editor in 1.67 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3192 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 168 unused Assets / (1.8 MB). Loaded Objects now: 3775.
-Memory consumption went from 156.1 MB to 154.3 MB.
-Total: 2.993459 ms (FindLiveObjects: 0.129375 ms CreateObjectMapping: 0.066750 ms MarkObjects: 2.501917 ms  DeleteObjects: 0.294875 ms)
-
-Prepare: number of updated asset objects reloaded= 16
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/precompiled-assembly-types:websocket-sharp:  -> 14fbe16c400853e620dbee885c09856b
-  custom:scripting/precompiled-assembly-types:Photon3Unity3D:  -> c6b5832f40bb2e6733b55db4d782a76d
-  custom:scripting/precompiled-assembly-types:Fusion.Sockets:  -> af11c6231dce799c3b2da97b39f39ecd
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp-Editor-firstpass:  -> 6725a54e58da7ba2c117ba3e3b1fc317
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp-firstpass:  -> d1daeefda41035eb331a3b1dc3a521ee
-  custom:scripting/monoscript/fileName/RunnerSimulatePhysicsBase.cs:  -> 32898ff68e6c304b0e5839afe448dfd2
-  custom:scripting/precompiled-assembly-types:Fusion.Runtime:  -> 09d297cc5a4c56fabecfac65a9473c62
-  custom:scripting/precompiled-assembly-types:Unity.Fusion.CodeGen:  -> 66eeeaf0e222175ee865851f13c18b8b
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics:  -> 512974a0a1fe38cb187ea0724daabf61
-  custom:scripting/precompiled-assembly-types:ParrelSync:  -> 098e7b816ea0a1c09ccd8ee56161b6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Realtime:  -> b963fb526158818459b333e135bcab17
-  custom:scripting/precompiled-assembly-types:Fusion.Common:  -> b893efb0e990633149e1c2da0bfaf090
-  custom:scripting/monoscript/fileName/FusionHubWindow.cs:  -> 761ecf44afbbe98f819411be58e9da60
-  custom:scripting/precompiled-assembly-types:Fusion.Unity:  -> 29a42af8314e5cd87514fbe315d9e6c8
-  custom:scripting/precompiled-assembly-types:NanoSockets:  -> 5215c3b157b18801e4d4a67db049f6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics.Editor:  -> 24d43e3376bd388c62e39b2db432e1af
-  custom:scripting/monoscript/fileName/NetworkRigidbodyBase.cs:  -> e4303870edb08348aebc167a0cac3f1b
-  custom:scripting/precompiled-assembly-types:Fusion.Log:  -> 17ae28182ca24f7ef3aba1ab6cfb3aea
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp:  -> ecfc323d3275eb1ce1eef6f402cd89a8
-  custom:scripting/precompiled-assembly-types:Fusion.Unity.Editor:  -> c04348b680782e70f4d164930372f260
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-Thread 0x287613000 may have been prematurely finalized
-- Loaded All Assemblies, in  0.365 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.795 seconds
-Domain Reload Profiling: 1161ms
-	BeginReloadAssembly (90ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (30ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (17ms)
-	LoadAllAssembliesAndSetupDomain (218ms)
-		LoadAssemblies (185ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (67ms)
-			TypeCache.Refresh (54ms)
-				TypeCache.ScanAssembly (45ms)
-			ScanForSourceGeneratedMonoScriptInfo (7ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (796ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (328ms)
+		SetupLoadedEditorAssemblies (344ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (17ms)
-			SetLoadedEditorAssemblies (4ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (45ms)
-			ProcessInitializeOnLoadAttributes (249ms)
-			ProcessInitializeOnLoadMethodAttributes (12ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (2ms)
-Refreshing native plugins compatible for Editor in 1.92 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3394 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (4.7 MB). Loaded Objects now: 3940.
-Memory consumption went from 171.0 MB to 166.3 MB.
-Total: 3.984709 ms (FindLiveObjects: 0.150375 ms CreateObjectMapping: 0.072416 ms MarkObjects: 2.598667 ms  DeleteObjects: 1.162667 ms)
-
-Prepare: number of updated asset objects reloaded= 6
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:scripting/monoscript/fileName/PhotonViewHandler.cs: 7c6c7799f7e9296388067c605d1dc27c -> 
-  custom:scripting/monoscript/fileName/RegionHandler.cs: 0a3dea041d0831d59d52725568de5bb2 -> 
-  custom:scripting/monoscript/fileName/PhotonStatsGui.cs: d8361e63c4cf02d1cc41570adb7e9d85 -> 
-  custom:scripting/monoscript/fileName/OnEscapeQuit.cs: be21f25ae17e13db5ee6619d0c4d06e1 -> 
-  custom:scripting/monoscript/fileName/OnJoinedInstantiate.cs: e6fcd481d2d6dd67f5b18fb26017d8ba -> 
-  custom:scripting/monoscript/fileName/CullingHandler.cs: ff4506351c41ac4ce471635b6b12ceb3 -> 
-  custom:scripting/monoscript/fileName/CullArea.cs: 96e9bbd1739cf311243f34ad393b8118 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CountdownTimer.cs: 29151b8b1909dcb5f8770e606e1b626a -> 
-  custom:scripting/precompiled-assembly-types:websocket-sharp: 0723036bceb1f91a35fc5688554b7745 -> 14fbe16c400853e620dbee885c09856b
-  custom:scripting/monoscript/fileName/PunSceneSettingsInspector.cs: da5c9fdcd684cd1c669e2f5c5f40d373 -> 
-  custom:scripting/precompiled-assembly-types:Photon3Unity3D: 5c568edf617785fa5f7f24c66908e4a0 -> c6b5832f40bb2e6733b55db4d782a76d
-  custom:scripting/monoscript/fileName/ChatPeer.cs: ab4cb6a09b2bd7026434274768d75701 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorView.cs: d7e478a730cbe0e6a3a4e1f87600646a -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/PlayerNumbering.cs: ce6d1f08b3d2d23009596a69c08b221d -> 
-  custom:scripting/monoscript/fileName/PhotonNetworkPart.cs: 28ef43a4727cd01eb0456d4c51a096be -> 
-  custom:scripting/monoscript/fileName/ConnectionHandler.cs: 33c1e29051dc60b1fb7e8675cafa9a54 -> 
-  custom:scripting/monoscript/fileName/ChatUserStatus.cs: 70a3ef1ac77c9464b5af9f3f7bba93e1 -> 
-  custom:scripting/monoscript/fileName/PhotonHandler.cs: 70e641dd7ce55eb351f633fc29fb5f7f -> 
-  custom:scripting/monoscript/fileName/TabViewManager.cs: a7d06552ed611c43e44fb3fef2b558f5 -> 
-  custom:scripting/monoscript/fileName/ChannelWellKnownProperties.cs: 7e2dabda8907dc60fb63ae9c28cb0b10 -> 
-  custom:scripting/monoscript/fileName/PhotonNetwork.cs: b0631ad5c9d567edbfc4fb2b742f00d0 -> 
-  custom:scripting/precompiled-assembly-types:PhotonChat: 9fb4a95dff8e4bb0341559d3196dd5d3 -> 
-  custom:scripting/monoscript/fileName/PhotonGUI.cs: a5571c3104cbd100c9135419869f9e73 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyView.cs: f6b453c3dd57cf47fa35b8156daece9a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassicEditor.cs: 174be401c238aa6e741f961399731929 -> 
-  custom:scripting/monoscript/fileName/ConnectAndJoinRandom.cs: 00d6f17fa442bd592f9dfb4622a40a5d -> 
-  custom:scripting/monoscript/fileName/EventSystemSpawner.cs: f408a55e814f245f8bc8085441fbe94b -> 
-  custom:scripting/monoscript/fileName/TextToggleIsOnTransition.cs: 3e45da2cb510baa5765664ee499455b7 -> 
-  custom:scripting/monoscript/fileName/SmoothSyncMovement.cs: 31ee6a992a574c4e665f73e48482d3fc -> 
-  custom:scripting/monoscript/fileName/OnClickRpc.cs: a4c1c482691ed3f8764f3736c0d692ea -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.Culling.Editor: 1c65dd968915d77191f2941086ccc40a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformView.cs: ea668b9d3ca2e512312f4d0840810b14 -> 
-  custom:scripting/monoscript/fileName/MonoBehaviourPunEditor.cs: a420633076e18e6ded9ee7ff41e5161d -> 
-  custom:scripting/monoscript/fileName/CustomTypes.cs: 32fb10f0e1ae6f1f4c5b8deb3c8e83c3 -> 
-  custom:scripting/monoscript/fileName/PhotonPing.cs: 3f140d1df899c474f22230f66cc59a41 -> 
-  custom:scripting/monoscript/fileName/PunTeams.cs: 97cdf6951e96c2643337cf5fb8f69c0b -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:scripting/monoscript/fileName/PunPlayerScores.cs: eee61e21995464ded106b44bf2f6edd4 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RoomInfo.cs: 86776ad49e4deb535029b369c45e7f36 -> 
-  custom:scripting/monoscript/fileName/PunTeamsInspector.cs: 4df913dbc11ac67364301ce3915ea909 -> 
-  custom:scripting/monoscript/fileName/PunSceneSettings.cs: 91ded15e638c075e189911af7f870d60 -> 
-  custom:scripting/precompiled-assembly-types:PhotonRealtime: 7d1395d44c22d2b2e4ff275afd53ae78 -> 
-  custom:scripting/monoscript/fileName/ServerSettings.cs: 8fa55e8857e3ebd201455fd70a9f157d -> 
-  custom:scripting/monoscript/fileName/ServerSettingsInspector.cs: 795ab5adcbe1b039269b191cdf1f4440 -> 
-  custom:scripting/monoscript/fileName/PhotonStreamQueue.cs: 5d5e55e8eb60f78e116626969ed0311e -> 
-  custom:scripting/monoscript/fileName/MoveByKeys.cs: 0be06a6581575752c58847799d9932e6 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking: f12915f6141c1a9d2d16b84465a88130 -> 
-  custom:scripting/precompiled-assembly-types:PhotonWebSocket: bae848875a35fe96f09fcc9f4e534600 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/Extensions.cs: 3f8618856b92f72822431fd67127e289 -> 
-  custom:scripting/monoscript/fileName/CullAreaEditor.cs: ac85e81dd9fb835b90f15d14c78d253a -> 
-  custom:scripting/monoscript/fileName/NetworkManager.cs: e4fa93220985ebf211f3da91d4ced24a -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities: 18f4cec32b65e32d610e86561a8b6826 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DViewEditor.cs: 1bbd8586933ea3b91d286e3a03ef0b15 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManager.cs: ed14ceec94e7d1247f794ca4f7f3aa2e -> 
-  custom:scripting/monoscript/fileName/ChatOperationCode.cs: dac444e0d5bbc5c837c33663c8b2cefb -> 
-  custom:scripting/monoscript/fileName/ChatParameterCode.cs: a0fd6a090c21b2fc7ca69a867e9c27c2 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:scripting/monoscript/fileName/ChannelCreationOptions.cs: 4231621e658bee43f79b42f64c894f83 -> 
-  custom:scripting/monoscript/fileName/GraphicToggleIsOnTransition.cs: 7e3768d2f1167a9a7dc7f801820c67a5 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:scripting/monoscript/fileName/TextButtonTransition.cs: 72621123551f8416d26a631e33786da7 -> 
-  custom:scripting/monoscript/fileName/ChatEventCode.cs: 764a52cdc3a575d4587f1a0939ee2b6d -> 
-  custom:scripting/monoscript/fileName/NestedComponentUtilities.cs: 033fd91b849b48295ab920beaf62446d -> 
-  custom:scripting/monoscript/fileName/Region.cs: a0331a07d2a132f6cd24585218741838 -> 
-  custom:scripting/monoscript/fileName/AccountService.cs: 7c0aa0a2fc32945a98dfff961245fc82 -> 
-  custom:scripting/monoscript/fileName/PhotonEditor.cs: 9beee3a7ca2bc764b51880f31127a0ea -> 
-  custom:scripting/monoscript/fileName/WebRpc.cs: ee2bfdfdd166ac7a426061037e23ee8f -> 
-  custom:scripting/monoscript/fileName/OnClickInstantiate.cs: 3929e8581c0458b4fa6c3ecec790414e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewEditor.cs: d59344a8429d1e1c91f78e42f728790a -> 
-  custom:scripting/monoscript/fileName/Room.cs: f509531380bf8f44be3c84421df8f27b -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.PhotonPlayer.Editor: 505abf32685786fe9ae158a097994203 -> 
-  custom:scripting/monoscript/fileName/StatesGui.cs: 98e5143501c303d7d5973c718d302233 -> 
-  custom:scripting/monoscript/fileName/PhotonEditorUtils.cs: 8abfdf8cc6e2802ba9e0f5f75e09957a -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyViewEditor.cs: ab7e34153fa9a3c646e0316fa6fc5600 -> 
-  custom:scripting/monoscript/fileName/PlayerNumberingInspector.cs: e277bf463a09eaa6bcf2868a0f243e5c -> 
-  custom:scripting/monoscript/fileName/OnStartDelete.cs: 020107d689eae9ab4a37b46ac589b3dd -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:scripting/monoscript/fileName/IPunCallbacks.cs: 81caf01d84a9fa08671565d87776010b -> 
-  custom:scripting/monoscript/fileName/FriendInfo.cs: be836ba41ecfa4c9dca4b510bdfea5c8 -> 
-  custom:scripting/monoscript/fileName/IPhotonViewCallbacks.cs: 6b192d91218207b95c2b171719310343 -> 
-  custom:scripting/monoscript/fileName/GestionnairePointsDeVie.cs: 4071a9cc6c4eba520bcdde4b22ae340f -> 
-  custom:scripting/monoscript/fileName/ButtonInsideScrollList.cs: 663db374c5f487d95198d2dce6dd1ce7 -> 
-  custom:scripting/monoscript/fileName/ReorderableListResources.cs: a21396365aa80586d6fe0c3f093e8e8a -> 12f8cf94345b17bd1a3aef7c3b5bd157
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManagerInspector.cs: 55bea48a55e757c56d53ded3ae32c48e -> 
-  custom:scripting/monoscript/fileName/PunTurnManager.cs: c24499e0acfb9782133d39c092b0366b -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/SupportLogger.cs: 6226925e792eee84b718aee3baaa82a7 -> 
-  custom:scripting/monoscript/fileName/ChatAppSettings.cs: db433ce9dc535a56c6c28a3183328622 -> 
-  custom:scripting/monoscript/fileName/OnClickDestroy.cs: 84deb4bc685f090f86133752922a945d -> 
-  custom:scripting/monoscript/fileName/PhotonView.cs: b2662a18b33c427e0ec2e5ab1a56c2b5 -> 
-  custom:scripting/monoscript/fileName/ChatChannel.cs: 052e931f7bf91536d9bda80d682b6368 -> 
-  custom:scripting/monoscript/fileName/ChatClient.cs: d3eb880194f03abd869e259e1e9fd5f0 -> 
-  custom:scripting/monoscript/fileName/IChatClientListener.cs: e6ec1b8d09bf11f3791c0bd18ae45880 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DView.cs: cfabe07ff5658dc80bf23a32c3f3d3ea -> 
-  custom:scripting/monoscript/fileName/Player.cs: b6aef835b43cb69bef999bd5136f7c21 -> 
-  custom:scripting/monoscript/fileName/AppSettings.cs: d20c247df910115cd4c5ae83482475ef -> 
-  custom:scripting/monoscript/fileName/LoadbalancingPeer.cs: d9dd9ca955de7f0a553b219d39f29621 -> 
-  custom:scripting/monoscript/fileName/LoadBalancingClient.cs: 81653cd7c36c48b40e854a627cc1e4f3 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorViewEditor.cs: fd89a9c520118567d7b47e39070bcd39 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PhotonViewInspector.cs: da72c707197b3a14a9e4fc031131a7bc -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Editor: df5a7bd56762360bfe82c9b737f4cd11 -> 
-  custom:scripting/monoscript/fileName/PointedAtGameObjectInfo.cs: 0f220a9d7e421f59db30fb04c90d6c0e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassic.cs: b13582f7122692c3dc0b0b58565603b7 -> 
-  custom:scripting/monoscript/fileName/PhotonLagSimulationGui.cs: de60acfca25c9c245519382776ad2f82 -> 
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: a5d6f4d3b42c72a3845280dcacef5ec5 -> ecfc323d3275eb1ce1eef6f402cd89a8
-  custom:scripting/monoscript/fileName/OnPointerOverTooltip.cs: b9abe1fce28033712ba423247874af86 -> 
-  custom:scripting/monoscript/fileName/PunClasses.cs: d6a17dc119cdc0b4a5b92f4135a56268 -> 
-  custom:scripting/precompiled-assembly-types:Fusion.Sockets:  -> af11c6231dce799c3b2da97b39f39ecd
-  custom:scripting/monoscript/fileName/RunnerSimulatePhysicsBase.cs:  -> 32898ff68e6c304b0e5839afe448dfd2
-  custom:scripting/precompiled-assembly-types:Fusion.Runtime:  -> 09d297cc5a4c56fabecfac65a9473c62
-  custom:scripting/precompiled-assembly-types:Unity.Fusion.CodeGen:  -> 66eeeaf0e222175ee865851f13c18b8b
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics:  -> 512974a0a1fe38cb187ea0724daabf61
-  custom:scripting/precompiled-assembly-types:ParrelSync:  -> 098e7b816ea0a1c09ccd8ee56161b6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Realtime:  -> b963fb526158818459b333e135bcab17
-  custom:scripting/precompiled-assembly-types:Fusion.Common:  -> b893efb0e990633149e1c2da0bfaf090
-  custom:scripting/monoscript/fileName/FusionHubWindow.cs:  -> 761ecf44afbbe98f819411be58e9da60
-  custom:scripting/precompiled-assembly-types:Fusion.Unity:  -> 29a42af8314e5cd87514fbe315d9e6c8
-  custom:scripting/precompiled-assembly-types:NanoSockets:  -> 5215c3b157b18801e4d4a67db049f6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics.Editor:  -> 24d43e3376bd388c62e39b2db432e1af
-  custom:scripting/monoscript/fileName/NetworkRigidbodyBase.cs:  -> e4303870edb08348aebc167a0cac3f1b
-  custom:scripting/precompiled-assembly-types:Fusion.Log:  -> 17ae28182ca24f7ef3aba1ab6cfb3aea
-  custom:scripting/precompiled-assembly-types:Fusion.Unity.Editor:  -> c04348b680782e70f4d164930372f260
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-Thread 0x287587000 may have been prematurely finalized
-- Loaded All Assemblies, in  0.373 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.559 seconds
-Domain Reload Profiling: 932ms
-	BeginReloadAssembly (92ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (31ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (17ms)
-	LoadAllAssembliesAndSetupDomain (226ms)
-		LoadAssemblies (183ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (78ms)
-			TypeCache.Refresh (63ms)
-				TypeCache.ScanAssembly (53ms)
-			ScanForSourceGeneratedMonoScriptInfo (9ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (559ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (325ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (44ms)
-			ProcessInitializeOnLoadAttributes (246ms)
-			ProcessInitializeOnLoadMethodAttributes (12ms)
+			BeforeProcessingInitializeOnLoad (39ms)
+			ProcessInitializeOnLoadAttributes (272ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (3ms)
-Refreshing native plugins compatible for Editor in 1.14 ms, found 2 plugins.
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3392 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (4.7 MB). Loaded Objects now: 3943.
-Memory consumption went from 174.9 MB to 170.2 MB.
-Total: 4.042125 ms (FindLiveObjects: 0.136333 ms CreateObjectMapping: 0.065584 ms MarkObjects: 2.656250 ms  DeleteObjects: 1.183709 ms)
+Unloading 3442 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 51 unused Assets / (4.7 MB). Loaded Objects now: 3917.
+Memory consumption went from 170.0 MB to 165.4 MB.
+Total: 4.626792 ms (FindLiveObjects: 0.145625 ms CreateObjectMapping: 0.065667 ms MarkObjects: 3.023458 ms  DeleteObjects: 1.391500 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:scripting/monoscript/fileName/PhotonViewHandler.cs: 7c6c7799f7e9296388067c605d1dc27c -> 
-  custom:scripting/monoscript/fileName/RegionHandler.cs: 0a3dea041d0831d59d52725568de5bb2 -> 
-  custom:scripting/monoscript/fileName/PhotonStatsGui.cs: d8361e63c4cf02d1cc41570adb7e9d85 -> 
-  custom:scripting/monoscript/fileName/OnEscapeQuit.cs: be21f25ae17e13db5ee6619d0c4d06e1 -> 
-  custom:scripting/monoscript/fileName/OnJoinedInstantiate.cs: e6fcd481d2d6dd67f5b18fb26017d8ba -> 
-  custom:scripting/monoscript/fileName/CullingHandler.cs: ff4506351c41ac4ce471635b6b12ceb3 -> 
-  custom:scripting/monoscript/fileName/CullArea.cs: 96e9bbd1739cf311243f34ad393b8118 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CountdownTimer.cs: 29151b8b1909dcb5f8770e606e1b626a -> 
-  custom:scripting/precompiled-assembly-types:websocket-sharp: 0723036bceb1f91a35fc5688554b7745 -> 14fbe16c400853e620dbee885c09856b
-  custom:scripting/monoscript/fileName/PunSceneSettingsInspector.cs: da5c9fdcd684cd1c669e2f5c5f40d373 -> 
-  custom:scripting/precompiled-assembly-types:Photon3Unity3D: 5c568edf617785fa5f7f24c66908e4a0 -> c6b5832f40bb2e6733b55db4d782a76d
-  custom:scripting/monoscript/fileName/ChatPeer.cs: ab4cb6a09b2bd7026434274768d75701 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorView.cs: d7e478a730cbe0e6a3a4e1f87600646a -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/PlayerNumbering.cs: ce6d1f08b3d2d23009596a69c08b221d -> 
-  custom:scripting/monoscript/fileName/PhotonNetworkPart.cs: 28ef43a4727cd01eb0456d4c51a096be -> 
-  custom:scripting/monoscript/fileName/ConnectionHandler.cs: 33c1e29051dc60b1fb7e8675cafa9a54 -> 
-  custom:scripting/monoscript/fileName/ChatUserStatus.cs: 70a3ef1ac77c9464b5af9f3f7bba93e1 -> 
-  custom:scripting/monoscript/fileName/PhotonHandler.cs: 70e641dd7ce55eb351f633fc29fb5f7f -> 
-  custom:scripting/monoscript/fileName/TabViewManager.cs: a7d06552ed611c43e44fb3fef2b558f5 -> 
-  custom:scripting/monoscript/fileName/ChannelWellKnownProperties.cs: 7e2dabda8907dc60fb63ae9c28cb0b10 -> 
-  custom:scripting/monoscript/fileName/PhotonNetwork.cs: b0631ad5c9d567edbfc4fb2b742f00d0 -> 
-  custom:scripting/precompiled-assembly-types:PhotonChat: 9fb4a95dff8e4bb0341559d3196dd5d3 -> 
-  custom:scripting/monoscript/fileName/PhotonGUI.cs: a5571c3104cbd100c9135419869f9e73 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyView.cs: f6b453c3dd57cf47fa35b8156daece9a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassicEditor.cs: 174be401c238aa6e741f961399731929 -> 
-  custom:scripting/monoscript/fileName/ConnectAndJoinRandom.cs: 00d6f17fa442bd592f9dfb4622a40a5d -> 
-  custom:scripting/monoscript/fileName/EventSystemSpawner.cs: f408a55e814f245f8bc8085441fbe94b -> 
-  custom:scripting/monoscript/fileName/TextToggleIsOnTransition.cs: 3e45da2cb510baa5765664ee499455b7 -> 
-  custom:scripting/monoscript/fileName/SmoothSyncMovement.cs: 31ee6a992a574c4e665f73e48482d3fc -> 
-  custom:scripting/monoscript/fileName/OnClickRpc.cs: a4c1c482691ed3f8764f3736c0d692ea -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.Culling.Editor: 1c65dd968915d77191f2941086ccc40a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformView.cs: ea668b9d3ca2e512312f4d0840810b14 -> 
-  custom:scripting/monoscript/fileName/MonoBehaviourPunEditor.cs: a420633076e18e6ded9ee7ff41e5161d -> 
-  custom:scripting/monoscript/fileName/CustomTypes.cs: 32fb10f0e1ae6f1f4c5b8deb3c8e83c3 -> 
-  custom:scripting/monoscript/fileName/PhotonPing.cs: 3f140d1df899c474f22230f66cc59a41 -> 
-  custom:scripting/monoscript/fileName/PunTeams.cs: 97cdf6951e96c2643337cf5fb8f69c0b -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:scripting/monoscript/fileName/PunPlayerScores.cs: eee61e21995464ded106b44bf2f6edd4 -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RoomInfo.cs: 86776ad49e4deb535029b369c45e7f36 -> 
-  custom:scripting/monoscript/fileName/PunTeamsInspector.cs: 4df913dbc11ac67364301ce3915ea909 -> 
-  custom:scripting/monoscript/fileName/PunSceneSettings.cs: 91ded15e638c075e189911af7f870d60 -> 
-  custom:scripting/precompiled-assembly-types:PhotonRealtime: 7d1395d44c22d2b2e4ff275afd53ae78 -> 
-  custom:scripting/monoscript/fileName/ServerSettings.cs: 8fa55e8857e3ebd201455fd70a9f157d -> 
-  custom:scripting/monoscript/fileName/ServerSettingsInspector.cs: 795ab5adcbe1b039269b191cdf1f4440 -> 
-  custom:scripting/monoscript/fileName/PhotonStreamQueue.cs: 5d5e55e8eb60f78e116626969ed0311e -> 
-  custom:scripting/monoscript/fileName/MoveByKeys.cs: 0be06a6581575752c58847799d9932e6 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking: f12915f6141c1a9d2d16b84465a88130 -> 
-  custom:scripting/precompiled-assembly-types:PhotonWebSocket: bae848875a35fe96f09fcc9f4e534600 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/Extensions.cs: 3f8618856b92f72822431fd67127e289 -> 
-  custom:scripting/monoscript/fileName/CullAreaEditor.cs: ac85e81dd9fb835b90f15d14c78d253a -> 
-  custom:scripting/monoscript/fileName/NetworkManager.cs: e4fa93220985ebf211f3da91d4ced24a -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities: 18f4cec32b65e32d610e86561a8b6826 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DViewEditor.cs: 1bbd8586933ea3b91d286e3a03ef0b15 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManager.cs: ed14ceec94e7d1247f794ca4f7f3aa2e -> 
-  custom:scripting/monoscript/fileName/ChatOperationCode.cs: dac444e0d5bbc5c837c33663c8b2cefb -> 
-  custom:scripting/monoscript/fileName/ChatParameterCode.cs: a0fd6a090c21b2fc7ca69a867e9c27c2 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:scripting/monoscript/fileName/ChannelCreationOptions.cs: 4231621e658bee43f79b42f64c894f83 -> 
-  custom:scripting/monoscript/fileName/GraphicToggleIsOnTransition.cs: 7e3768d2f1167a9a7dc7f801820c67a5 -> 
   custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:scripting/monoscript/fileName/TextButtonTransition.cs: 72621123551f8416d26a631e33786da7 -> 
-  custom:scripting/monoscript/fileName/ChatEventCode.cs: 764a52cdc3a575d4587f1a0939ee2b6d -> 
-  custom:scripting/monoscript/fileName/NestedComponentUtilities.cs: 033fd91b849b48295ab920beaf62446d -> 
-  custom:scripting/monoscript/fileName/Region.cs: a0331a07d2a132f6cd24585218741838 -> 
-  custom:scripting/monoscript/fileName/AccountService.cs: 7c0aa0a2fc32945a98dfff961245fc82 -> 
-  custom:scripting/monoscript/fileName/PhotonEditor.cs: 9beee3a7ca2bc764b51880f31127a0ea -> 
-  custom:scripting/monoscript/fileName/WebRpc.cs: ee2bfdfdd166ac7a426061037e23ee8f -> 
-  custom:scripting/monoscript/fileName/OnClickInstantiate.cs: 3929e8581c0458b4fa6c3ecec790414e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewEditor.cs: d59344a8429d1e1c91f78e42f728790a -> 
-  custom:scripting/monoscript/fileName/Room.cs: f509531380bf8f44be3c84421df8f27b -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.PhotonPlayer.Editor: 505abf32685786fe9ae158a097994203 -> 
-  custom:scripting/monoscript/fileName/StatesGui.cs: 98e5143501c303d7d5973c718d302233 -> 
-  custom:scripting/monoscript/fileName/PhotonEditorUtils.cs: 8abfdf8cc6e2802ba9e0f5f75e09957a -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyViewEditor.cs: ab7e34153fa9a3c646e0316fa6fc5600 -> 
-  custom:scripting/monoscript/fileName/PlayerNumberingInspector.cs: e277bf463a09eaa6bcf2868a0f243e5c -> 
-  custom:scripting/monoscript/fileName/OnStartDelete.cs: 020107d689eae9ab4a37b46ac589b3dd -> 
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:scripting/monoscript/fileName/IPunCallbacks.cs: 81caf01d84a9fa08671565d87776010b -> 
-  custom:scripting/monoscript/fileName/FriendInfo.cs: be836ba41ecfa4c9dca4b510bdfea5c8 -> 
-  custom:scripting/monoscript/fileName/IPhotonViewCallbacks.cs: 6b192d91218207b95c2b171719310343 -> 
-  custom:scripting/monoscript/fileName/GestionnairePointsDeVie.cs: 4071a9cc6c4eba520bcdde4b22ae340f -> 
-  custom:scripting/monoscript/fileName/ButtonInsideScrollList.cs: 663db374c5f487d95198d2dce6dd1ce7 -> 
-  custom:scripting/monoscript/fileName/ReorderableListResources.cs: a21396365aa80586d6fe0c3f093e8e8a -> 12f8cf94345b17bd1a3aef7c3b5bd157
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManagerInspector.cs: 55bea48a55e757c56d53ded3ae32c48e -> 
-  custom:scripting/monoscript/fileName/PunTurnManager.cs: c24499e0acfb9782133d39c092b0366b -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/SupportLogger.cs: 6226925e792eee84b718aee3baaa82a7 -> 
-  custom:scripting/monoscript/fileName/ChatAppSettings.cs: db433ce9dc535a56c6c28a3183328622 -> 
-  custom:scripting/monoscript/fileName/OnClickDestroy.cs: 84deb4bc685f090f86133752922a945d -> 
-  custom:scripting/monoscript/fileName/PhotonView.cs: b2662a18b33c427e0ec2e5ab1a56c2b5 -> 
-  custom:scripting/monoscript/fileName/ChatChannel.cs: 052e931f7bf91536d9bda80d682b6368 -> 
-  custom:scripting/monoscript/fileName/ChatClient.cs: d3eb880194f03abd869e259e1e9fd5f0 -> 
-  custom:scripting/monoscript/fileName/IChatClientListener.cs: e6ec1b8d09bf11f3791c0bd18ae45880 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DView.cs: cfabe07ff5658dc80bf23a32c3f3d3ea -> 
-  custom:scripting/monoscript/fileName/Player.cs: b6aef835b43cb69bef999bd5136f7c21 -> 
-  custom:scripting/monoscript/fileName/AppSettings.cs: d20c247df910115cd4c5ae83482475ef -> 
-  custom:scripting/monoscript/fileName/LoadbalancingPeer.cs: d9dd9ca955de7f0a553b219d39f29621 -> 
-  custom:scripting/monoscript/fileName/LoadBalancingClient.cs: 81653cd7c36c48b40e854a627cc1e4f3 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorViewEditor.cs: fd89a9c520118567d7b47e39070bcd39 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PhotonViewInspector.cs: da72c707197b3a14a9e4fc031131a7bc -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Editor: df5a7bd56762360bfe82c9b737f4cd11 -> 
-  custom:scripting/monoscript/fileName/PointedAtGameObjectInfo.cs: 0f220a9d7e421f59db30fb04c90d6c0e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassic.cs: b13582f7122692c3dc0b0b58565603b7 -> 
-  custom:scripting/monoscript/fileName/PhotonLagSimulationGui.cs: de60acfca25c9c245519382776ad2f82 -> 
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: a5d6f4d3b42c72a3845280dcacef5ec5 -> ecfc323d3275eb1ce1eef6f402cd89a8
-  custom:scripting/monoscript/fileName/OnPointerOverTooltip.cs: b9abe1fce28033712ba423247874af86 -> 
-  custom:scripting/monoscript/fileName/PunClasses.cs: d6a17dc119cdc0b4a5b92f4135a56268 -> 
-  custom:scripting/precompiled-assembly-types:Fusion.Sockets:  -> af11c6231dce799c3b2da97b39f39ecd
-  custom:scripting/monoscript/fileName/RunnerSimulatePhysicsBase.cs:  -> 32898ff68e6c304b0e5839afe448dfd2
-  custom:scripting/precompiled-assembly-types:Fusion.Runtime:  -> 09d297cc5a4c56fabecfac65a9473c62
-  custom:scripting/precompiled-assembly-types:Unity.Fusion.CodeGen:  -> 66eeeaf0e222175ee865851f13c18b8b
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics:  -> 512974a0a1fe38cb187ea0724daabf61
-  custom:scripting/precompiled-assembly-types:ParrelSync:  -> 098e7b816ea0a1c09ccd8ee56161b6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Realtime:  -> b963fb526158818459b333e135bcab17
-  custom:scripting/precompiled-assembly-types:Fusion.Common:  -> b893efb0e990633149e1c2da0bfaf090
-  custom:scripting/monoscript/fileName/FusionHubWindow.cs:  -> 761ecf44afbbe98f819411be58e9da60
-  custom:scripting/precompiled-assembly-types:Fusion.Unity:  -> 29a42af8314e5cd87514fbe315d9e6c8
-  custom:scripting/precompiled-assembly-types:NanoSockets:  -> 5215c3b157b18801e4d4a67db049f6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics.Editor:  -> 24d43e3376bd388c62e39b2db432e1af
-  custom:scripting/monoscript/fileName/NetworkRigidbodyBase.cs:  -> e4303870edb08348aebc167a0cac3f1b
-  custom:scripting/precompiled-assembly-types:Fusion.Log:  -> 17ae28182ca24f7ef3aba1ab6cfb3aea
-  custom:scripting/precompiled-assembly-types:Fusion.Unity.Editor:  -> c04348b680782e70f4d164930372f260
 ========================================================================
 Received Import Request.
-  Time since last request: 112.277132 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(cdc0fd1a7845c4ec9845c14782496eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(cdc0fd1a7845c4ec9845c14782496eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '41904181e216258ac650a87ad1cba15e') in 0.001764 seconds
+  Time since last request: 11025.109994 seconds.
+  path: Assets/Prefabs/Resources/JoueurReseau.prefab
+  artifactKey: Guid(b3cf74a1487194e718e7c7a480ed4531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Resources/JoueurReseau.prefab using Guid(b3cf74a1487194e718e7c7a480ed4531) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '363cd809dea5a792ac17378d5bd717f9') in 0.290442 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 282
 ========================================================================
 Received Import Request.
-  Time since last request: 3.739044 seconds.
-  path: Assets/Prefabs/Resources
-  artifactKey: Guid(0c4f077fdbca645aa859f69ebe9b079c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources using Guid(0c4f077fdbca645aa859f69ebe9b079c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '355b6dbf9375a65f4af172eac74eaf22') in 0.000467 seconds
+  Time since last request: 13.532927 seconds.
+  path: Assets/Prefabs/Resources/PolicemanController.prefab
+  artifactKey: Guid(230d42e8ab76442f7b8cecd0b5b2f6ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Resources/PolicemanController.prefab using Guid(230d42e8ab76442f7b8cecd0b5b2f6ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '50b1452f48eda004e84f49f202053253') in 0.227335 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 337
 ========================================================================
 Received Import Request.
-  Time since last request: 26.040350 seconds.
-  path: Assets/Photon
-  artifactKey: Guid(98951132346795f438babe7a3183da43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon using Guid(98951132346795f438babe7a3183da43) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '2a9c28fcb0145d831ea654cebe46d97e') in 0.000505 seconds
+  Time since last request: 9.101821 seconds.
+  path: Assets/Prefabs/Resources/RobotYController.prefab
+  artifactKey: Guid(222bfbd517426492aa8cf9e362bea32c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Resources/RobotYController.prefab using Guid(222bfbd517426492aa8cf9e362bea32c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '00c0b4c5c0c59b9750a4f57b1a552152') in 0.048059 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 282
 ========================================================================
 Received Import Request.
-  Time since last request: 3.401064 seconds.
-  path: Assets/Photon/PhotonUnityNetworking
-  artifactKey: Guid(d2b6672cc770a19438ff06fcb2637630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking using Guid(d2b6672cc770a19438ff06fcb2637630) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '9e928c7697522228c138e94781c476f0') in 0.000528 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.002658 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Resources
-  artifactKey: Guid(f3f0079af99df471b9e11c1fb9e7100d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Resources using Guid(f3f0079af99df471b9e11c1fb9e7100d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'de724c010dec465eaab09066714eefcd') in 0.000615 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.238384 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset
-  artifactKey: Guid(8dcc1b7ece4b44ad68d6427c8c60d6d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset using Guid(8dcc1b7ece4b44ad68d6427c8c60d6d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '7ac93a750c7822fb9731f171934f8ffd') in 0.008592 seconds
+  Time since last request: 143.096538 seconds.
+  path: Assets/Models/Gun/Materials/FlareParticleMaterial.mat
+  artifactKey: Guid(ee4c67fddaf254bf0b483bd03884876d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Gun/Materials/FlareParticleMaterial.mat using Guid(ee4c67fddaf254bf0b483bd03884876d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '3c825a9944a2a125e71f2aff8aea33c4') in 0.044741 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-Thread 0x16d5bf000 may have been prematurely finalized
-- Loaded All Assemblies, in  0.338 seconds
+Thread 0x31bcbf000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.321 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
@@ -748,370 +251,67 @@ Native extension for WebGL target not found
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.829 seconds
-Domain Reload Profiling: 1167ms
-	BeginReloadAssembly (93ms)
+- Finished resetting the current domain, in  0.844 seconds
+Domain Reload Profiling: 1165ms
+	BeginReloadAssembly (101ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (31ms)
-	RebuildCommonClasses (28ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (30ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (17ms)
-	LoadAllAssembliesAndSetupDomain (189ms)
-		LoadAssemblies (211ms)
+	initialDomainReloadingComplete (18ms)
+	LoadAllAssembliesAndSetupDomain (162ms)
+		LoadAssemblies (183ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (14ms)
-			TypeCache.Refresh (6ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (8ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (830ms)
+	FinalizeReload (845ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (326ms)
+		SetupLoadedEditorAssemblies (325ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (19ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (44ms)
-			ProcessInitializeOnLoadAttributes (246ms)
-			ProcessInitializeOnLoadMethodAttributes (12ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (2ms)
-Refreshing native plugins compatible for Editor in 1.96 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3391 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (4.7 MB). Loaded Objects now: 3947.
-Memory consumption went from 179.1 MB to 174.4 MB.
-Total: 4.408458 ms (FindLiveObjects: 0.157792 ms CreateObjectMapping: 0.068458 ms MarkObjects: 2.806792 ms  DeleteObjects: 1.375042 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:scripting/monoscript/fileName/PhotonViewHandler.cs: 7c6c7799f7e9296388067c605d1dc27c -> 
-  custom:scripting/monoscript/fileName/RegionHandler.cs: 0a3dea041d0831d59d52725568de5bb2 -> 
-  custom:scripting/monoscript/fileName/PhotonStatsGui.cs: d8361e63c4cf02d1cc41570adb7e9d85 -> 
-  custom:scripting/monoscript/fileName/OnEscapeQuit.cs: be21f25ae17e13db5ee6619d0c4d06e1 -> 
-  custom:scripting/monoscript/fileName/OnJoinedInstantiate.cs: e6fcd481d2d6dd67f5b18fb26017d8ba -> 
-  custom:scripting/monoscript/fileName/CullingHandler.cs: ff4506351c41ac4ce471635b6b12ceb3 -> 
-  custom:scripting/monoscript/fileName/CullArea.cs: 96e9bbd1739cf311243f34ad393b8118 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CountdownTimer.cs: 29151b8b1909dcb5f8770e606e1b626a -> 
-  custom:scripting/precompiled-assembly-types:websocket-sharp: 0723036bceb1f91a35fc5688554b7745 -> 14fbe16c400853e620dbee885c09856b
-  custom:scripting/monoscript/fileName/PunSceneSettingsInspector.cs: da5c9fdcd684cd1c669e2f5c5f40d373 -> 
-  custom:scripting/precompiled-assembly-types:Photon3Unity3D: 5c568edf617785fa5f7f24c66908e4a0 -> c6b5832f40bb2e6733b55db4d782a76d
-  custom:scripting/monoscript/fileName/ChatPeer.cs: ab4cb6a09b2bd7026434274768d75701 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorView.cs: d7e478a730cbe0e6a3a4e1f87600646a -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/PlayerNumbering.cs: ce6d1f08b3d2d23009596a69c08b221d -> 
-  custom:scripting/monoscript/fileName/PhotonNetworkPart.cs: 28ef43a4727cd01eb0456d4c51a096be -> 
-  custom:scripting/monoscript/fileName/ConnectionHandler.cs: 33c1e29051dc60b1fb7e8675cafa9a54 -> 
-  custom:scripting/monoscript/fileName/ChatUserStatus.cs: 70a3ef1ac77c9464b5af9f3f7bba93e1 -> 
-  custom:scripting/monoscript/fileName/PhotonHandler.cs: 70e641dd7ce55eb351f633fc29fb5f7f -> 
-  custom:scripting/monoscript/fileName/TabViewManager.cs: a7d06552ed611c43e44fb3fef2b558f5 -> 
-  custom:scripting/monoscript/fileName/ChannelWellKnownProperties.cs: 7e2dabda8907dc60fb63ae9c28cb0b10 -> 
-  custom:scripting/monoscript/fileName/PhotonNetwork.cs: b0631ad5c9d567edbfc4fb2b742f00d0 -> 
-  custom:scripting/precompiled-assembly-types:PhotonChat: 9fb4a95dff8e4bb0341559d3196dd5d3 -> 
-  custom:scripting/monoscript/fileName/PhotonGUI.cs: a5571c3104cbd100c9135419869f9e73 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyView.cs: f6b453c3dd57cf47fa35b8156daece9a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassicEditor.cs: 174be401c238aa6e741f961399731929 -> 
-  custom:scripting/monoscript/fileName/ConnectAndJoinRandom.cs: 00d6f17fa442bd592f9dfb4622a40a5d -> 
-  custom:scripting/monoscript/fileName/EventSystemSpawner.cs: f408a55e814f245f8bc8085441fbe94b -> 
-  custom:scripting/monoscript/fileName/TextToggleIsOnTransition.cs: 3e45da2cb510baa5765664ee499455b7 -> 
-  custom:scripting/monoscript/fileName/SmoothSyncMovement.cs: 31ee6a992a574c4e665f73e48482d3fc -> 
-  custom:scripting/monoscript/fileName/OnClickRpc.cs: a4c1c482691ed3f8764f3736c0d692ea -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.Culling.Editor: 1c65dd968915d77191f2941086ccc40a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformView.cs: ea668b9d3ca2e512312f4d0840810b14 -> 
-  custom:scripting/monoscript/fileName/MonoBehaviourPunEditor.cs: a420633076e18e6ded9ee7ff41e5161d -> 
-  custom:scripting/monoscript/fileName/CustomTypes.cs: 32fb10f0e1ae6f1f4c5b8deb3c8e83c3 -> 
-  custom:scripting/monoscript/fileName/PhotonPing.cs: 3f140d1df899c474f22230f66cc59a41 -> 
-  custom:scripting/monoscript/fileName/PunTeams.cs: 97cdf6951e96c2643337cf5fb8f69c0b -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:scripting/monoscript/fileName/PunPlayerScores.cs: eee61e21995464ded106b44bf2f6edd4 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RoomInfo.cs: 86776ad49e4deb535029b369c45e7f36 -> 
-  custom:scripting/monoscript/fileName/PunTeamsInspector.cs: 4df913dbc11ac67364301ce3915ea909 -> 
-  custom:scripting/monoscript/fileName/PunSceneSettings.cs: 91ded15e638c075e189911af7f870d60 -> 
-  custom:scripting/precompiled-assembly-types:PhotonRealtime: 7d1395d44c22d2b2e4ff275afd53ae78 -> 
-  custom:scripting/monoscript/fileName/ServerSettings.cs: 8fa55e8857e3ebd201455fd70a9f157d -> 
-  custom:scripting/monoscript/fileName/ServerSettingsInspector.cs: 795ab5adcbe1b039269b191cdf1f4440 -> 
-  custom:scripting/monoscript/fileName/PhotonStreamQueue.cs: 5d5e55e8eb60f78e116626969ed0311e -> 
-  custom:scripting/monoscript/fileName/MoveByKeys.cs: 0be06a6581575752c58847799d9932e6 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking: f12915f6141c1a9d2d16b84465a88130 -> 
-  custom:scripting/precompiled-assembly-types:PhotonWebSocket: bae848875a35fe96f09fcc9f4e534600 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/Extensions.cs: 3f8618856b92f72822431fd67127e289 -> 
-  custom:scripting/monoscript/fileName/CullAreaEditor.cs: ac85e81dd9fb835b90f15d14c78d253a -> 
-  custom:scripting/monoscript/fileName/NetworkManager.cs: e4fa93220985ebf211f3da91d4ced24a -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities: 18f4cec32b65e32d610e86561a8b6826 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DViewEditor.cs: 1bbd8586933ea3b91d286e3a03ef0b15 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManager.cs: ed14ceec94e7d1247f794ca4f7f3aa2e -> 
-  custom:scripting/monoscript/fileName/ChatOperationCode.cs: dac444e0d5bbc5c837c33663c8b2cefb -> 
-  custom:scripting/monoscript/fileName/ChatParameterCode.cs: a0fd6a090c21b2fc7ca69a867e9c27c2 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:scripting/monoscript/fileName/ChannelCreationOptions.cs: 4231621e658bee43f79b42f64c894f83 -> 
-  custom:scripting/monoscript/fileName/GraphicToggleIsOnTransition.cs: 7e3768d2f1167a9a7dc7f801820c67a5 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:scripting/monoscript/fileName/TextButtonTransition.cs: 72621123551f8416d26a631e33786da7 -> 
-  custom:scripting/monoscript/fileName/ChatEventCode.cs: 764a52cdc3a575d4587f1a0939ee2b6d -> 
-  custom:scripting/monoscript/fileName/NestedComponentUtilities.cs: 033fd91b849b48295ab920beaf62446d -> 
-  custom:scripting/monoscript/fileName/Region.cs: a0331a07d2a132f6cd24585218741838 -> 
-  custom:scripting/monoscript/fileName/AccountService.cs: 7c0aa0a2fc32945a98dfff961245fc82 -> 
-  custom:scripting/monoscript/fileName/PhotonEditor.cs: 9beee3a7ca2bc764b51880f31127a0ea -> 
-  custom:scripting/monoscript/fileName/WebRpc.cs: ee2bfdfdd166ac7a426061037e23ee8f -> 
-  custom:scripting/monoscript/fileName/OnClickInstantiate.cs: 3929e8581c0458b4fa6c3ecec790414e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewEditor.cs: d59344a8429d1e1c91f78e42f728790a -> 
-  custom:scripting/monoscript/fileName/Room.cs: f509531380bf8f44be3c84421df8f27b -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.PhotonPlayer.Editor: 505abf32685786fe9ae158a097994203 -> 
-  custom:scripting/monoscript/fileName/StatesGui.cs: 98e5143501c303d7d5973c718d302233 -> 
-  custom:scripting/monoscript/fileName/PhotonEditorUtils.cs: 8abfdf8cc6e2802ba9e0f5f75e09957a -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyViewEditor.cs: ab7e34153fa9a3c646e0316fa6fc5600 -> 
-  custom:scripting/monoscript/fileName/PlayerNumberingInspector.cs: e277bf463a09eaa6bcf2868a0f243e5c -> 
-  custom:scripting/monoscript/fileName/OnStartDelete.cs: 020107d689eae9ab4a37b46ac589b3dd -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:scripting/monoscript/fileName/IPunCallbacks.cs: 81caf01d84a9fa08671565d87776010b -> 
-  custom:scripting/monoscript/fileName/FriendInfo.cs: be836ba41ecfa4c9dca4b510bdfea5c8 -> 
-  custom:scripting/monoscript/fileName/IPhotonViewCallbacks.cs: 6b192d91218207b95c2b171719310343 -> 
-  custom:scripting/monoscript/fileName/GestionnairePointsDeVie.cs: 4071a9cc6c4eba520bcdde4b22ae340f -> 
-  custom:scripting/monoscript/fileName/ButtonInsideScrollList.cs: 663db374c5f487d95198d2dce6dd1ce7 -> 
-  custom:scripting/monoscript/fileName/ReorderableListResources.cs: a21396365aa80586d6fe0c3f093e8e8a -> 12f8cf94345b17bd1a3aef7c3b5bd157
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManagerInspector.cs: 55bea48a55e757c56d53ded3ae32c48e -> 
-  custom:scripting/monoscript/fileName/PunTurnManager.cs: c24499e0acfb9782133d39c092b0366b -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/SupportLogger.cs: 6226925e792eee84b718aee3baaa82a7 -> 
-  custom:scripting/monoscript/fileName/ChatAppSettings.cs: db433ce9dc535a56c6c28a3183328622 -> 
-  custom:scripting/monoscript/fileName/OnClickDestroy.cs: 84deb4bc685f090f86133752922a945d -> 
-  custom:scripting/monoscript/fileName/PhotonView.cs: b2662a18b33c427e0ec2e5ab1a56c2b5 -> 
-  custom:scripting/monoscript/fileName/ChatChannel.cs: 052e931f7bf91536d9bda80d682b6368 -> 
-  custom:scripting/monoscript/fileName/ChatClient.cs: d3eb880194f03abd869e259e1e9fd5f0 -> 
-  custom:scripting/monoscript/fileName/IChatClientListener.cs: e6ec1b8d09bf11f3791c0bd18ae45880 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DView.cs: cfabe07ff5658dc80bf23a32c3f3d3ea -> 
-  custom:scripting/monoscript/fileName/Player.cs: b6aef835b43cb69bef999bd5136f7c21 -> 
-  custom:scripting/monoscript/fileName/AppSettings.cs: d20c247df910115cd4c5ae83482475ef -> 
-  custom:scripting/monoscript/fileName/LoadbalancingPeer.cs: d9dd9ca955de7f0a553b219d39f29621 -> 
-  custom:scripting/monoscript/fileName/LoadBalancingClient.cs: 81653cd7c36c48b40e854a627cc1e4f3 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorViewEditor.cs: fd89a9c520118567d7b47e39070bcd39 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PhotonViewInspector.cs: da72c707197b3a14a9e4fc031131a7bc -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Editor: df5a7bd56762360bfe82c9b737f4cd11 -> 
-  custom:scripting/monoscript/fileName/PointedAtGameObjectInfo.cs: 0f220a9d7e421f59db30fb04c90d6c0e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassic.cs: b13582f7122692c3dc0b0b58565603b7 -> 
-  custom:scripting/monoscript/fileName/PhotonLagSimulationGui.cs: de60acfca25c9c245519382776ad2f82 -> 
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: a5d6f4d3b42c72a3845280dcacef5ec5 -> ecfc323d3275eb1ce1eef6f402cd89a8
-  custom:scripting/monoscript/fileName/OnPointerOverTooltip.cs: b9abe1fce28033712ba423247874af86 -> 
-  custom:scripting/monoscript/fileName/PunClasses.cs: d6a17dc119cdc0b4a5b92f4135a56268 -> 
-  custom:scripting/precompiled-assembly-types:Fusion.Sockets:  -> af11c6231dce799c3b2da97b39f39ecd
-  custom:scripting/monoscript/fileName/RunnerSimulatePhysicsBase.cs:  -> 32898ff68e6c304b0e5839afe448dfd2
-  custom:scripting/precompiled-assembly-types:Fusion.Runtime:  -> 09d297cc5a4c56fabecfac65a9473c62
-  custom:scripting/precompiled-assembly-types:Unity.Fusion.CodeGen:  -> 66eeeaf0e222175ee865851f13c18b8b
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics:  -> 512974a0a1fe38cb187ea0724daabf61
-  custom:scripting/precompiled-assembly-types:ParrelSync:  -> 098e7b816ea0a1c09ccd8ee56161b6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Realtime:  -> b963fb526158818459b333e135bcab17
-  custom:scripting/precompiled-assembly-types:Fusion.Common:  -> b893efb0e990633149e1c2da0bfaf090
-  custom:scripting/monoscript/fileName/FusionHubWindow.cs:  -> 761ecf44afbbe98f819411be58e9da60
-  custom:scripting/precompiled-assembly-types:Fusion.Unity:  -> 29a42af8314e5cd87514fbe315d9e6c8
-  custom:scripting/precompiled-assembly-types:NanoSockets:  -> 5215c3b157b18801e4d4a67db049f6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics.Editor:  -> 24d43e3376bd388c62e39b2db432e1af
-  custom:scripting/monoscript/fileName/NetworkRigidbodyBase.cs:  -> e4303870edb08348aebc167a0cac3f1b
-  custom:scripting/precompiled-assembly-types:Fusion.Log:  -> 17ae28182ca24f7ef3aba1ab6cfb3aea
-  custom:scripting/precompiled-assembly-types:Fusion.Unity.Editor:  -> c04348b680782e70f4d164930372f260
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-Thread 0x16d5bf000 may have been prematurely finalized
-- Loaded All Assemblies, in  0.343 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.791 seconds
-Domain Reload Profiling: 1135ms
-	BeginReloadAssembly (88ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (17ms)
-	LoadAllAssembliesAndSetupDomain (201ms)
-		LoadAssemblies (211ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (23ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (5ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (791ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (331ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (46ms)
+			BeforeProcessingInitializeOnLoad (40ms)
 			ProcessInitializeOnLoadAttributes (250ms)
-			ProcessInitializeOnLoadMethodAttributes (13ms)
+			ProcessInitializeOnLoadMethodAttributes (14ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (3ms)
 Refreshing native plugins compatible for Editor in 1.86 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3392 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (4.6 MB). Loaded Objects now: 3950.
-Memory consumption went from 183.5 MB to 178.9 MB.
-Total: 4.077917 ms (FindLiveObjects: 0.145125 ms CreateObjectMapping: 0.068500 ms MarkObjects: 2.630792 ms  DeleteObjects: 1.233167 ms)
+Unloading 3403 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (4.7 MB). Loaded Objects now: 3967.
+Memory consumption went from 167.2 MB to 162.6 MB.
+Total: 4.550125 ms (FindLiveObjects: 0.167250 ms CreateObjectMapping: 0.070833 ms MarkObjects: 3.038292 ms  DeleteObjects: 1.273167 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:scripting/monoscript/fileName/PhotonViewHandler.cs: 7c6c7799f7e9296388067c605d1dc27c -> 
-  custom:scripting/monoscript/fileName/RegionHandler.cs: 0a3dea041d0831d59d52725568de5bb2 -> 
-  custom:scripting/monoscript/fileName/PhotonStatsGui.cs: d8361e63c4cf02d1cc41570adb7e9d85 -> 
-  custom:scripting/monoscript/fileName/OnEscapeQuit.cs: be21f25ae17e13db5ee6619d0c4d06e1 -> 
-  custom:scripting/monoscript/fileName/OnJoinedInstantiate.cs: e6fcd481d2d6dd67f5b18fb26017d8ba -> 
-  custom:scripting/monoscript/fileName/CullingHandler.cs: ff4506351c41ac4ce471635b6b12ceb3 -> 
-  custom:scripting/monoscript/fileName/CullArea.cs: 96e9bbd1739cf311243f34ad393b8118 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CountdownTimer.cs: 29151b8b1909dcb5f8770e606e1b626a -> 
-  custom:scripting/precompiled-assembly-types:websocket-sharp: 0723036bceb1f91a35fc5688554b7745 -> 14fbe16c400853e620dbee885c09856b
-  custom:scripting/monoscript/fileName/PunSceneSettingsInspector.cs: da5c9fdcd684cd1c669e2f5c5f40d373 -> 
-  custom:scripting/precompiled-assembly-types:Photon3Unity3D: 5c568edf617785fa5f7f24c66908e4a0 -> c6b5832f40bb2e6733b55db4d782a76d
-  custom:scripting/monoscript/fileName/ChatPeer.cs: ab4cb6a09b2bd7026434274768d75701 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorView.cs: d7e478a730cbe0e6a3a4e1f87600646a -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/PlayerNumbering.cs: ce6d1f08b3d2d23009596a69c08b221d -> 
-  custom:scripting/monoscript/fileName/PhotonNetworkPart.cs: 28ef43a4727cd01eb0456d4c51a096be -> 
-  custom:scripting/monoscript/fileName/ConnectionHandler.cs: 33c1e29051dc60b1fb7e8675cafa9a54 -> 
-  custom:scripting/monoscript/fileName/ChatUserStatus.cs: 70a3ef1ac77c9464b5af9f3f7bba93e1 -> 
-  custom:scripting/monoscript/fileName/PhotonHandler.cs: 70e641dd7ce55eb351f633fc29fb5f7f -> 
-  custom:scripting/monoscript/fileName/TabViewManager.cs: a7d06552ed611c43e44fb3fef2b558f5 -> 
-  custom:scripting/monoscript/fileName/ChannelWellKnownProperties.cs: 7e2dabda8907dc60fb63ae9c28cb0b10 -> 
-  custom:scripting/monoscript/fileName/PhotonNetwork.cs: b0631ad5c9d567edbfc4fb2b742f00d0 -> 
-  custom:scripting/precompiled-assembly-types:PhotonChat: 9fb4a95dff8e4bb0341559d3196dd5d3 -> 
-  custom:scripting/monoscript/fileName/PhotonGUI.cs: a5571c3104cbd100c9135419869f9e73 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyView.cs: f6b453c3dd57cf47fa35b8156daece9a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassicEditor.cs: 174be401c238aa6e741f961399731929 -> 
-  custom:scripting/monoscript/fileName/ConnectAndJoinRandom.cs: 00d6f17fa442bd592f9dfb4622a40a5d -> 
-  custom:scripting/monoscript/fileName/EventSystemSpawner.cs: f408a55e814f245f8bc8085441fbe94b -> 
-  custom:scripting/monoscript/fileName/TextToggleIsOnTransition.cs: 3e45da2cb510baa5765664ee499455b7 -> 
-  custom:scripting/monoscript/fileName/SmoothSyncMovement.cs: 31ee6a992a574c4e665f73e48482d3fc -> 
-  custom:scripting/monoscript/fileName/OnClickRpc.cs: a4c1c482691ed3f8764f3736c0d692ea -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.Culling.Editor: 1c65dd968915d77191f2941086ccc40a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformView.cs: ea668b9d3ca2e512312f4d0840810b14 -> 
-  custom:scripting/monoscript/fileName/MonoBehaviourPunEditor.cs: a420633076e18e6ded9ee7ff41e5161d -> 
-  custom:scripting/monoscript/fileName/CustomTypes.cs: 32fb10f0e1ae6f1f4c5b8deb3c8e83c3 -> 
-  custom:scripting/monoscript/fileName/PhotonPing.cs: 3f140d1df899c474f22230f66cc59a41 -> 
-  custom:scripting/monoscript/fileName/PunTeams.cs: 97cdf6951e96c2643337cf5fb8f69c0b -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:scripting/monoscript/fileName/PunPlayerScores.cs: eee61e21995464ded106b44bf2f6edd4 -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RoomInfo.cs: 86776ad49e4deb535029b369c45e7f36 -> 
-  custom:scripting/monoscript/fileName/PunTeamsInspector.cs: 4df913dbc11ac67364301ce3915ea909 -> 
-  custom:scripting/monoscript/fileName/PunSceneSettings.cs: 91ded15e638c075e189911af7f870d60 -> 
-  custom:scripting/precompiled-assembly-types:PhotonRealtime: 7d1395d44c22d2b2e4ff275afd53ae78 -> 
-  custom:scripting/monoscript/fileName/ServerSettings.cs: 8fa55e8857e3ebd201455fd70a9f157d -> 
-  custom:scripting/monoscript/fileName/ServerSettingsInspector.cs: 795ab5adcbe1b039269b191cdf1f4440 -> 
-  custom:scripting/monoscript/fileName/PhotonStreamQueue.cs: 5d5e55e8eb60f78e116626969ed0311e -> 
-  custom:scripting/monoscript/fileName/MoveByKeys.cs: 0be06a6581575752c58847799d9932e6 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking: f12915f6141c1a9d2d16b84465a88130 -> 
-  custom:scripting/precompiled-assembly-types:PhotonWebSocket: bae848875a35fe96f09fcc9f4e534600 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/Extensions.cs: 3f8618856b92f72822431fd67127e289 -> 
-  custom:scripting/monoscript/fileName/CullAreaEditor.cs: ac85e81dd9fb835b90f15d14c78d253a -> 
-  custom:scripting/monoscript/fileName/NetworkManager.cs: e4fa93220985ebf211f3da91d4ced24a -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities: 18f4cec32b65e32d610e86561a8b6826 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DViewEditor.cs: 1bbd8586933ea3b91d286e3a03ef0b15 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManager.cs: ed14ceec94e7d1247f794ca4f7f3aa2e -> 
-  custom:scripting/monoscript/fileName/ChatOperationCode.cs: dac444e0d5bbc5c837c33663c8b2cefb -> 
-  custom:scripting/monoscript/fileName/ChatParameterCode.cs: a0fd6a090c21b2fc7ca69a867e9c27c2 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:scripting/monoscript/fileName/ChannelCreationOptions.cs: 4231621e658bee43f79b42f64c894f83 -> 
-  custom:scripting/monoscript/fileName/GraphicToggleIsOnTransition.cs: 7e3768d2f1167a9a7dc7f801820c67a5 -> 
   custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:scripting/monoscript/fileName/TextButtonTransition.cs: 72621123551f8416d26a631e33786da7 -> 
-  custom:scripting/monoscript/fileName/ChatEventCode.cs: 764a52cdc3a575d4587f1a0939ee2b6d -> 
-  custom:scripting/monoscript/fileName/NestedComponentUtilities.cs: 033fd91b849b48295ab920beaf62446d -> 
-  custom:scripting/monoscript/fileName/Region.cs: a0331a07d2a132f6cd24585218741838 -> 
-  custom:scripting/monoscript/fileName/AccountService.cs: 7c0aa0a2fc32945a98dfff961245fc82 -> 
-  custom:scripting/monoscript/fileName/PhotonEditor.cs: 9beee3a7ca2bc764b51880f31127a0ea -> 
-  custom:scripting/monoscript/fileName/WebRpc.cs: ee2bfdfdd166ac7a426061037e23ee8f -> 
-  custom:scripting/monoscript/fileName/OnClickInstantiate.cs: 3929e8581c0458b4fa6c3ecec790414e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewEditor.cs: d59344a8429d1e1c91f78e42f728790a -> 
-  custom:scripting/monoscript/fileName/Room.cs: f509531380bf8f44be3c84421df8f27b -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.PhotonPlayer.Editor: 505abf32685786fe9ae158a097994203 -> 
-  custom:scripting/monoscript/fileName/StatesGui.cs: 98e5143501c303d7d5973c718d302233 -> 
-  custom:scripting/monoscript/fileName/PhotonEditorUtils.cs: 8abfdf8cc6e2802ba9e0f5f75e09957a -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyViewEditor.cs: ab7e34153fa9a3c646e0316fa6fc5600 -> 
-  custom:scripting/monoscript/fileName/PlayerNumberingInspector.cs: e277bf463a09eaa6bcf2868a0f243e5c -> 
-  custom:scripting/monoscript/fileName/OnStartDelete.cs: 020107d689eae9ab4a37b46ac589b3dd -> 
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:scripting/monoscript/fileName/IPunCallbacks.cs: 81caf01d84a9fa08671565d87776010b -> 
-  custom:scripting/monoscript/fileName/FriendInfo.cs: be836ba41ecfa4c9dca4b510bdfea5c8 -> 
-  custom:scripting/monoscript/fileName/IPhotonViewCallbacks.cs: 6b192d91218207b95c2b171719310343 -> 
-  custom:scripting/monoscript/fileName/GestionnairePointsDeVie.cs: 4071a9cc6c4eba520bcdde4b22ae340f -> 
-  custom:scripting/monoscript/fileName/ButtonInsideScrollList.cs: 663db374c5f487d95198d2dce6dd1ce7 -> 
-  custom:scripting/monoscript/fileName/ReorderableListResources.cs: a21396365aa80586d6fe0c3f093e8e8a -> 12f8cf94345b17bd1a3aef7c3b5bd157
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManagerInspector.cs: 55bea48a55e757c56d53ded3ae32c48e -> 
-  custom:scripting/monoscript/fileName/PunTurnManager.cs: c24499e0acfb9782133d39c092b0366b -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/SupportLogger.cs: 6226925e792eee84b718aee3baaa82a7 -> 
-  custom:scripting/monoscript/fileName/ChatAppSettings.cs: db433ce9dc535a56c6c28a3183328622 -> 
-  custom:scripting/monoscript/fileName/OnClickDestroy.cs: 84deb4bc685f090f86133752922a945d -> 
-  custom:scripting/monoscript/fileName/PhotonView.cs: b2662a18b33c427e0ec2e5ab1a56c2b5 -> 
-  custom:scripting/monoscript/fileName/ChatChannel.cs: 052e931f7bf91536d9bda80d682b6368 -> 
-  custom:scripting/monoscript/fileName/ChatClient.cs: d3eb880194f03abd869e259e1e9fd5f0 -> 
-  custom:scripting/monoscript/fileName/IChatClientListener.cs: e6ec1b8d09bf11f3791c0bd18ae45880 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DView.cs: cfabe07ff5658dc80bf23a32c3f3d3ea -> 
-  custom:scripting/monoscript/fileName/Player.cs: b6aef835b43cb69bef999bd5136f7c21 -> 
-  custom:scripting/monoscript/fileName/AppSettings.cs: d20c247df910115cd4c5ae83482475ef -> 
-  custom:scripting/monoscript/fileName/LoadbalancingPeer.cs: d9dd9ca955de7f0a553b219d39f29621 -> 
-  custom:scripting/monoscript/fileName/LoadBalancingClient.cs: 81653cd7c36c48b40e854a627cc1e4f3 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorViewEditor.cs: fd89a9c520118567d7b47e39070bcd39 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PhotonViewInspector.cs: da72c707197b3a14a9e4fc031131a7bc -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Editor: df5a7bd56762360bfe82c9b737f4cd11 -> 
-  custom:scripting/monoscript/fileName/PointedAtGameObjectInfo.cs: 0f220a9d7e421f59db30fb04c90d6c0e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassic.cs: b13582f7122692c3dc0b0b58565603b7 -> 
-  custom:scripting/monoscript/fileName/PhotonLagSimulationGui.cs: de60acfca25c9c245519382776ad2f82 -> 
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: a5d6f4d3b42c72a3845280dcacef5ec5 -> ecfc323d3275eb1ce1eef6f402cd89a8
-  custom:scripting/monoscript/fileName/OnPointerOverTooltip.cs: b9abe1fce28033712ba423247874af86 -> 
-  custom:scripting/monoscript/fileName/PunClasses.cs: d6a17dc119cdc0b4a5b92f4135a56268 -> 
-  custom:scripting/precompiled-assembly-types:Fusion.Sockets:  -> af11c6231dce799c3b2da97b39f39ecd
-  custom:scripting/monoscript/fileName/RunnerSimulatePhysicsBase.cs:  -> 32898ff68e6c304b0e5839afe448dfd2
-  custom:scripting/precompiled-assembly-types:Fusion.Runtime:  -> 09d297cc5a4c56fabecfac65a9473c62
-  custom:scripting/precompiled-assembly-types:Unity.Fusion.CodeGen:  -> 66eeeaf0e222175ee865851f13c18b8b
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics:  -> 512974a0a1fe38cb187ea0724daabf61
-  custom:scripting/precompiled-assembly-types:ParrelSync:  -> 098e7b816ea0a1c09ccd8ee56161b6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Realtime:  -> b963fb526158818459b333e135bcab17
-  custom:scripting/precompiled-assembly-types:Fusion.Common:  -> b893efb0e990633149e1c2da0bfaf090
-  custom:scripting/monoscript/fileName/FusionHubWindow.cs:  -> 761ecf44afbbe98f819411be58e9da60
-  custom:scripting/precompiled-assembly-types:Fusion.Unity:  -> 29a42af8314e5cd87514fbe315d9e6c8
-  custom:scripting/precompiled-assembly-types:NanoSockets:  -> 5215c3b157b18801e4d4a67db049f6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics.Editor:  -> 24d43e3376bd388c62e39b2db432e1af
-  custom:scripting/monoscript/fileName/NetworkRigidbodyBase.cs:  -> e4303870edb08348aebc167a0cac3f1b
-  custom:scripting/precompiled-assembly-types:Fusion.Log:  -> 17ae28182ca24f7ef3aba1ab6cfb3aea
-  custom:scripting/precompiled-assembly-types:Fusion.Unity.Editor:  -> c04348b680782e70f4d164930372f260
 ========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-Thread 0x16d5bf000 may have been prematurely finalized
-- Loaded All Assemblies, in  0.343 seconds
+Thread 0x176a67000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.276 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
@@ -1120,293 +320,58 @@ Native extension for WebGL target not found
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.786 seconds
-Domain Reload Profiling: 1130ms
-	BeginReloadAssembly (93ms)
+- Finished resetting the current domain, in  0.779 seconds
+Domain Reload Profiling: 1055ms
+	BeginReloadAssembly (90ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (31ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (10ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (11ms)
 	initialDomainReloadingComplete (17ms)
-	LoadAllAssembliesAndSetupDomain (194ms)
-		LoadAssemblies (209ms)
+	LoadAllAssembliesAndSetupDomain (129ms)
+		LoadAssemblies (150ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (21ms)
-			TypeCache.Refresh (9ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (7ms)
 				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (6ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (787ms)
+	FinalizeReload (779ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
 		SetupLoadedEditorAssemblies (322ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (46ms)
-			ProcessInitializeOnLoadAttributes (242ms)
-			ProcessInitializeOnLoadMethodAttributes (12ms)
+			BeforeProcessingInitializeOnLoad (40ms)
+			ProcessInitializeOnLoadAttributes (249ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (2ms)
-Refreshing native plugins compatible for Editor in 1.85 ms, found 2 plugins.
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 2.14 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3392 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (4.7 MB). Loaded Objects now: 3953.
-Memory consumption went from 187.8 MB to 183.2 MB.
-Total: 4.304208 ms (FindLiveObjects: 0.150291 ms CreateObjectMapping: 0.073625 ms MarkObjects: 2.762916 ms  DeleteObjects: 1.316792 ms)
+Unloading 3404 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (4.6 MB). Loaded Objects now: 3970.
+Memory consumption went from 171.6 MB to 166.9 MB.
+Total: 5.155208 ms (FindLiveObjects: 0.194167 ms CreateObjectMapping: 0.078292 ms MarkObjects: 3.444250 ms  DeleteObjects: 1.437834 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:scripting/monoscript/fileName/PhotonViewHandler.cs: 7c6c7799f7e9296388067c605d1dc27c -> 
-  custom:scripting/monoscript/fileName/RegionHandler.cs: 0a3dea041d0831d59d52725568de5bb2 -> 
-  custom:scripting/monoscript/fileName/PhotonStatsGui.cs: d8361e63c4cf02d1cc41570adb7e9d85 -> 
-  custom:scripting/monoscript/fileName/OnEscapeQuit.cs: be21f25ae17e13db5ee6619d0c4d06e1 -> 
-  custom:scripting/monoscript/fileName/OnJoinedInstantiate.cs: e6fcd481d2d6dd67f5b18fb26017d8ba -> 
-  custom:scripting/monoscript/fileName/CullingHandler.cs: ff4506351c41ac4ce471635b6b12ceb3 -> 
-  custom:scripting/monoscript/fileName/CullArea.cs: 96e9bbd1739cf311243f34ad393b8118 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/CountdownTimer.cs: 29151b8b1909dcb5f8770e606e1b626a -> 
-  custom:scripting/precompiled-assembly-types:websocket-sharp: 0723036bceb1f91a35fc5688554b7745 -> 14fbe16c400853e620dbee885c09856b
-  custom:scripting/monoscript/fileName/PunSceneSettingsInspector.cs: da5c9fdcd684cd1c669e2f5c5f40d373 -> 
-  custom:scripting/precompiled-assembly-types:Photon3Unity3D: 5c568edf617785fa5f7f24c66908e4a0 -> c6b5832f40bb2e6733b55db4d782a76d
-  custom:scripting/monoscript/fileName/ChatPeer.cs: ab4cb6a09b2bd7026434274768d75701 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorView.cs: d7e478a730cbe0e6a3a4e1f87600646a -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/PlayerNumbering.cs: ce6d1f08b3d2d23009596a69c08b221d -> 
-  custom:scripting/monoscript/fileName/PhotonNetworkPart.cs: 28ef43a4727cd01eb0456d4c51a096be -> 
-  custom:scripting/monoscript/fileName/ConnectionHandler.cs: 33c1e29051dc60b1fb7e8675cafa9a54 -> 
-  custom:scripting/monoscript/fileName/ChatUserStatus.cs: 70a3ef1ac77c9464b5af9f3f7bba93e1 -> 
-  custom:scripting/monoscript/fileName/PhotonHandler.cs: 70e641dd7ce55eb351f633fc29fb5f7f -> 
-  custom:scripting/monoscript/fileName/TabViewManager.cs: a7d06552ed611c43e44fb3fef2b558f5 -> 
-  custom:scripting/monoscript/fileName/ChannelWellKnownProperties.cs: 7e2dabda8907dc60fb63ae9c28cb0b10 -> 
-  custom:scripting/monoscript/fileName/PhotonNetwork.cs: b0631ad5c9d567edbfc4fb2b742f00d0 -> 
-  custom:scripting/precompiled-assembly-types:PhotonChat: 9fb4a95dff8e4bb0341559d3196dd5d3 -> 
-  custom:scripting/monoscript/fileName/PhotonGUI.cs: a5571c3104cbd100c9135419869f9e73 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyView.cs: f6b453c3dd57cf47fa35b8156daece9a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassicEditor.cs: 174be401c238aa6e741f961399731929 -> 
-  custom:scripting/monoscript/fileName/ConnectAndJoinRandom.cs: 00d6f17fa442bd592f9dfb4622a40a5d -> 
-  custom:scripting/monoscript/fileName/EventSystemSpawner.cs: f408a55e814f245f8bc8085441fbe94b -> 
-  custom:scripting/monoscript/fileName/TextToggleIsOnTransition.cs: 3e45da2cb510baa5765664ee499455b7 -> 
-  custom:scripting/monoscript/fileName/SmoothSyncMovement.cs: 31ee6a992a574c4e665f73e48482d3fc -> 
-  custom:scripting/monoscript/fileName/OnClickRpc.cs: a4c1c482691ed3f8764f3736c0d692ea -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.Culling.Editor: 1c65dd968915d77191f2941086ccc40a -> 
-  custom:scripting/monoscript/fileName/PhotonTransformView.cs: ea668b9d3ca2e512312f4d0840810b14 -> 
-  custom:scripting/monoscript/fileName/MonoBehaviourPunEditor.cs: a420633076e18e6ded9ee7ff41e5161d -> 
-  custom:scripting/monoscript/fileName/CustomTypes.cs: 32fb10f0e1ae6f1f4c5b8deb3c8e83c3 -> 
-  custom:scripting/monoscript/fileName/PhotonPing.cs: 3f140d1df899c474f22230f66cc59a41 -> 
-  custom:scripting/monoscript/fileName/PunTeams.cs: 97cdf6951e96c2643337cf5fb8f69c0b -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:scripting/monoscript/fileName/PunPlayerScores.cs: eee61e21995464ded106b44bf2f6edd4 -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RoomInfo.cs: 86776ad49e4deb535029b369c45e7f36 -> 
-  custom:scripting/monoscript/fileName/PunTeamsInspector.cs: 4df913dbc11ac67364301ce3915ea909 -> 
-  custom:scripting/monoscript/fileName/PunSceneSettings.cs: 91ded15e638c075e189911af7f870d60 -> 
-  custom:scripting/precompiled-assembly-types:PhotonRealtime: 7d1395d44c22d2b2e4ff275afd53ae78 -> 
-  custom:scripting/monoscript/fileName/ServerSettings.cs: 8fa55e8857e3ebd201455fd70a9f157d -> 
-  custom:scripting/monoscript/fileName/ServerSettingsInspector.cs: 795ab5adcbe1b039269b191cdf1f4440 -> 
-  custom:scripting/monoscript/fileName/PhotonStreamQueue.cs: 5d5e55e8eb60f78e116626969ed0311e -> 
-  custom:scripting/monoscript/fileName/MoveByKeys.cs: 0be06a6581575752c58847799d9932e6 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking: f12915f6141c1a9d2d16b84465a88130 -> 
-  custom:scripting/precompiled-assembly-types:PhotonWebSocket: bae848875a35fe96f09fcc9f4e534600 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/monoscript/fileName/Extensions.cs: 3f8618856b92f72822431fd67127e289 -> 
-  custom:scripting/monoscript/fileName/CullAreaEditor.cs: ac85e81dd9fb835b90f15d14c78d253a -> 
-  custom:scripting/monoscript/fileName/NetworkManager.cs: e4fa93220985ebf211f3da91d4ced24a -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities: 18f4cec32b65e32d610e86561a8b6826 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DViewEditor.cs: 1bbd8586933ea3b91d286e3a03ef0b15 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManager.cs: ed14ceec94e7d1247f794ca4f7f3aa2e -> 
-  custom:scripting/monoscript/fileName/ChatOperationCode.cs: dac444e0d5bbc5c837c33663c8b2cefb -> 
-  custom:scripting/monoscript/fileName/ChatParameterCode.cs: a0fd6a090c21b2fc7ca69a867e9c27c2 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:scripting/monoscript/fileName/ChannelCreationOptions.cs: 4231621e658bee43f79b42f64c894f83 -> 
-  custom:scripting/monoscript/fileName/GraphicToggleIsOnTransition.cs: 7e3768d2f1167a9a7dc7f801820c67a5 -> 
   custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:scripting/monoscript/fileName/TextButtonTransition.cs: 72621123551f8416d26a631e33786da7 -> 
-  custom:scripting/monoscript/fileName/ChatEventCode.cs: 764a52cdc3a575d4587f1a0939ee2b6d -> 
-  custom:scripting/monoscript/fileName/NestedComponentUtilities.cs: 033fd91b849b48295ab920beaf62446d -> 
-  custom:scripting/monoscript/fileName/Region.cs: a0331a07d2a132f6cd24585218741838 -> 
-  custom:scripting/monoscript/fileName/AccountService.cs: 7c0aa0a2fc32945a98dfff961245fc82 -> 
-  custom:scripting/monoscript/fileName/PhotonEditor.cs: 9beee3a7ca2bc764b51880f31127a0ea -> 
-  custom:scripting/monoscript/fileName/WebRpc.cs: ee2bfdfdd166ac7a426061037e23ee8f -> 
-  custom:scripting/monoscript/fileName/OnClickInstantiate.cs: 3929e8581c0458b4fa6c3ecec790414e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewEditor.cs: d59344a8429d1e1c91f78e42f728790a -> 
-  custom:scripting/monoscript/fileName/Room.cs: f509531380bf8f44be3c84421df8f27b -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Utilities.PhotonPlayer.Editor: 505abf32685786fe9ae158a097994203 -> 
-  custom:scripting/monoscript/fileName/StatesGui.cs: 98e5143501c303d7d5973c718d302233 -> 
-  custom:scripting/monoscript/fileName/PhotonEditorUtils.cs: 8abfdf8cc6e2802ba9e0f5f75e09957a -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbodyViewEditor.cs: ab7e34153fa9a3c646e0316fa6fc5600 -> 
-  custom:scripting/monoscript/fileName/PlayerNumberingInspector.cs: e277bf463a09eaa6bcf2868a0f243e5c -> 
-  custom:scripting/monoscript/fileName/OnStartDelete.cs: 020107d689eae9ab4a37b46ac589b3dd -> 
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:scripting/monoscript/fileName/IPunCallbacks.cs: 81caf01d84a9fa08671565d87776010b -> 
-  custom:scripting/monoscript/fileName/FriendInfo.cs: be836ba41ecfa4c9dca4b510bdfea5c8 -> 
-  custom:scripting/monoscript/fileName/IPhotonViewCallbacks.cs: 6b192d91218207b95c2b171719310343 -> 
-  custom:scripting/monoscript/fileName/GestionnairePointsDeVie.cs: 4071a9cc6c4eba520bcdde4b22ae340f -> 
-  custom:scripting/monoscript/fileName/ButtonInsideScrollList.cs: 663db374c5f487d95198d2dce6dd1ce7 -> 
-  custom:scripting/monoscript/fileName/ReorderableListResources.cs: a21396365aa80586d6fe0c3f093e8e8a -> 12f8cf94345b17bd1a3aef7c3b5bd157
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:scripting/monoscript/fileName/PhotonTeamsManagerInspector.cs: 55bea48a55e757c56d53ded3ae32c48e -> 
-  custom:scripting/monoscript/fileName/PunTurnManager.cs: c24499e0acfb9782133d39c092b0366b -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/SupportLogger.cs: 6226925e792eee84b718aee3baaa82a7 -> 
-  custom:scripting/monoscript/fileName/ChatAppSettings.cs: db433ce9dc535a56c6c28a3183328622 -> 
-  custom:scripting/monoscript/fileName/OnClickDestroy.cs: 84deb4bc685f090f86133752922a945d -> 
-  custom:scripting/monoscript/fileName/PhotonView.cs: b2662a18b33c427e0ec2e5ab1a56c2b5 -> 
-  custom:scripting/monoscript/fileName/ChatChannel.cs: 052e931f7bf91536d9bda80d682b6368 -> 
-  custom:scripting/monoscript/fileName/ChatClient.cs: d3eb880194f03abd869e259e1e9fd5f0 -> 
-  custom:scripting/monoscript/fileName/IChatClientListener.cs: e6ec1b8d09bf11f3791c0bd18ae45880 -> 
-  custom:scripting/monoscript/fileName/PhotonRigidbody2DView.cs: cfabe07ff5658dc80bf23a32c3f3d3ea -> 
-  custom:scripting/monoscript/fileName/Player.cs: b6aef835b43cb69bef999bd5136f7c21 -> 
-  custom:scripting/monoscript/fileName/AppSettings.cs: d20c247df910115cd4c5ae83482475ef -> 
-  custom:scripting/monoscript/fileName/LoadbalancingPeer.cs: d9dd9ca955de7f0a553b219d39f29621 -> 
-  custom:scripting/monoscript/fileName/LoadBalancingClient.cs: 81653cd7c36c48b40e854a627cc1e4f3 -> 
-  custom:scripting/monoscript/fileName/PhotonAnimatorViewEditor.cs: fd89a9c520118567d7b47e39070bcd39 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/PhotonViewInspector.cs: da72c707197b3a14a9e4fc031131a7bc -> 
-  custom:scripting/precompiled-assembly-types:PhotonUnityNetworking.Editor: df5a7bd56762360bfe82c9b737f4cd11 -> 
-  custom:scripting/monoscript/fileName/PointedAtGameObjectInfo.cs: 0f220a9d7e421f59db30fb04c90d6c0e -> 
-  custom:scripting/monoscript/fileName/PhotonTransformViewClassic.cs: b13582f7122692c3dc0b0b58565603b7 -> 
-  custom:scripting/monoscript/fileName/PhotonLagSimulationGui.cs: de60acfca25c9c245519382776ad2f82 -> 
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: a5d6f4d3b42c72a3845280dcacef5ec5 -> ecfc323d3275eb1ce1eef6f402cd89a8
-  custom:scripting/monoscript/fileName/OnPointerOverTooltip.cs: b9abe1fce28033712ba423247874af86 -> 
-  custom:scripting/monoscript/fileName/PunClasses.cs: d6a17dc119cdc0b4a5b92f4135a56268 -> 
-  custom:scripting/precompiled-assembly-types:Fusion.Sockets:  -> af11c6231dce799c3b2da97b39f39ecd
-  custom:scripting/monoscript/fileName/RunnerSimulatePhysicsBase.cs:  -> 32898ff68e6c304b0e5839afe448dfd2
-  custom:scripting/precompiled-assembly-types:Fusion.Runtime:  -> 09d297cc5a4c56fabecfac65a9473c62
-  custom:scripting/precompiled-assembly-types:Unity.Fusion.CodeGen:  -> 66eeeaf0e222175ee865851f13c18b8b
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics:  -> 512974a0a1fe38cb187ea0724daabf61
-  custom:scripting/precompiled-assembly-types:ParrelSync:  -> 098e7b816ea0a1c09ccd8ee56161b6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Realtime:  -> b963fb526158818459b333e135bcab17
-  custom:scripting/precompiled-assembly-types:Fusion.Common:  -> b893efb0e990633149e1c2da0bfaf090
-  custom:scripting/monoscript/fileName/FusionHubWindow.cs:  -> 761ecf44afbbe98f819411be58e9da60
-  custom:scripting/precompiled-assembly-types:Fusion.Unity:  -> 29a42af8314e5cd87514fbe315d9e6c8
-  custom:scripting/precompiled-assembly-types:NanoSockets:  -> 5215c3b157b18801e4d4a67db049f6fb
-  custom:scripting/precompiled-assembly-types:Fusion.Addons.Physics.Editor:  -> 24d43e3376bd388c62e39b2db432e1af
-  custom:scripting/monoscript/fileName/NetworkRigidbodyBase.cs:  -> e4303870edb08348aebc167a0cac3f1b
-  custom:scripting/precompiled-assembly-types:Fusion.Log:  -> 17ae28182ca24f7ef3aba1ab6cfb3aea
-  custom:scripting/precompiled-assembly-types:Fusion.Unity.Editor:  -> c04348b680782e70f4d164930372f260
-========================================================================
-Received Import Request.
-  Time since last request: 610.619489 seconds.
-  path: Assets/Prefabs/EnvironnementVille.prefab
-  artifactKey: Guid(70507b4ae056944849e86a941f4ce781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/EnvironnementVille.prefab using Guid(70507b4ae056944849e86a941f4ce781) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '135f73b99609ee23cf4f26d9ff59b2dd') in 0.001278 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 74.180204 seconds.
-  path: Assets/Prefabs/Resources/JoueurReseau.prefab
-  artifactKey: Guid(e6f9186a08f2948e3932d649d3999682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/JoueurReseau.prefab using Guid(e6f9186a08f2948e3932d649d3999682) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'd0ebf832315344d92fea7e1f8ce4da0f') in 0.002528 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 242.186860 seconds.
-  path: Assets/Prefabs/Resources/ImpactWood.prefab
-  artifactKey: Guid(dc84b9d0ce7194f9e8f706d7ff3e3e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/ImpactWood.prefab using Guid(dc84b9d0ce7194f9e8f706d7ff3e3e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '215d74de80d3ced6190d9541c0416e72') in 0.000756 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 46.067119 seconds.
-  path: Assets/Prefabs/Resources/ImpactWater.prefab
-  artifactKey: Guid(d2ede86caeeb2415882aa7071833dc30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/ImpactWater.prefab using Guid(d2ede86caeeb2415882aa7071833dc30) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '0b301043994382692e071dc29880f88b') in 0.000804 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 18.998653 seconds.
-  path: Assets/Prefabs/Resources/ImpactMetal.prefab
-  artifactKey: Guid(e844690db889a498ebeb210407f787c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/ImpactMetal.prefab using Guid(e844690db889a498ebeb210407f787c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'dd171833512478d1118aa6308011ed39') in 0.000668 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 21.403131 seconds.
-  path: Assets/Prefabs/Resources/ImpactGlass.prefab
-  artifactKey: Guid(5312d5d1197434a3b8e53d9fd2b0d127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/ImpactGlass.prefab using Guid(5312d5d1197434a3b8e53d9fd2b0d127) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '90c70960ea5463235dde8c9dd64bd1f9') in 0.000659 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 16.694421 seconds.
-  path: Assets/Prefabs/Resources/ImpactFlesh.prefab
-  artifactKey: Guid(3bab7a5306f074fb9b36eaf03b86e081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/ImpactFlesh.prefab using Guid(3bab7a5306f074fb9b36eaf03b86e081) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'bbb3aca885eeaa255711a5e931d8b84e') in 0.000648 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 27.312800 seconds.
-  path: Assets/Prefabs/Resources/ImpactDirt.prefab
-  artifactKey: Guid(efb0af647838d45e697ed42ef7f947e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/ImpactDirt.prefab using Guid(efb0af647838d45e697ed42ef7f947e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'd5ac7eb5d80baa63538d1b44b9c4e2c7') in 0.001737 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 23.053060 seconds.
-  path: Assets/Prefabs/Resources/ImpactConcrete.prefab
-  artifactKey: Guid(967cc38047397467985712587d4018c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/ImpactConcrete.prefab using Guid(967cc38047397467985712587d4018c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '71c0da0f529b3e5f4f40b911b80333ba') in 0.000596 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 25.340942 seconds.
-  path: Assets/Prefabs/Resources/ImpactBrick.prefab
-  artifactKey: Guid(736044371553049199d9a2a867c7d005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/ImpactBrick.prefab using Guid(736044371553049199d9a2a867c7d005) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '48fcded02965072730a8a6e530b92b56') in 0.000612 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 23.515880 seconds.
-  path: Assets/Prefabs/Resources/ImpactConcrete.prefab
-  artifactKey: Guid(967cc38047397467985712587d4018c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/ImpactConcrete.prefab using Guid(967cc38047397467985712587d4018c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'dccb2f886bd1bd9b326f1cf3653d89dd') in 0.001168 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 9.638853 seconds.
-  path: Assets/Prefabs/Resources/GunParticles.prefab
-  artifactKey: Guid(874e34dc3327e49f38e4d29b0aa68688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Resources/GunParticles.prefab using Guid(874e34dc3327e49f38e4d29b0aa68688) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '304c9c8de1803aa918809674e72fd45d') in 0.083072 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 12.740820 seconds.
-  path: Assets/Prefabs/EnvironnementVille.prefab
-  artifactKey: Guid(70507b4ae056944849e86a941f4ce781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/EnvironnementVille.prefab using Guid(70507b4ae056944849e86a941f4ce781) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'f7bac6b557beb00dc0d879aa8d3ecc6a') in 0.000635 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0

@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 306444209}
   - component: {fileID: 306444208}
   m_Layer: 5
-  m_Name: CanvasJoueur
+  m_Name: CanvasJeu
   m_TagString: Screen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab8fe696114a4d908f66bbfa38af4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectionText: {fileID: 1944477248}
+  texteConnexion: {fileID: 1944477248}
   spawnPoints:
   - {fileID: 2063641497}
   - {fileID: 1237517626}
@@ -1167,13 +1167,13 @@ MonoBehaviour:
   - {fileID: 535470156}
   - {fileID: 711672772}
   sceneCamera: {fileID: 604533720}
-  joueurPrefab: {fileID: 2572278822675821913, guid: e6f9186a08f2948e3932d649d3999682, type: 3}
+  joueurPrefab: {fileID: 2208903903691071860, guid: b3cf74a1487194e718e7c7a480ed4531, type: 3}
   serverWindow: {fileID: 605072209}
   messageWindow: {fileID: 410766283}
-  sightImage: {fileID: 654836662}
-  username: {fileID: 639533334}
-  roomName: {fileID: 1010295547}
-  roomList: {fileID: 657696102}
+  cibleTir: {fileID: 654836662}
+  nomJoueur: {fileID: 639533334}
+  nomSalle: {fileID: 1010295547}
+  listeSalle: {fileID: 657696102}
   messagesLog: {fileID: 396387670}
 --- !u!4 &584936850
 Transform:
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookPoint: {fileID: 1385854880}
-  rotateSpeed: 12
+  vitesseRotation: 12
 --- !u!1 &605072209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1637,7 +1637,7 @@ GameObject:
   - component: {fileID: 654836665}
   - component: {fileID: 654836664}
   m_Layer: 5
-  m_Name: SightImage
+  m_Name: CibleTir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
