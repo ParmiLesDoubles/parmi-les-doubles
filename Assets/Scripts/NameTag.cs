@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 
 // Script qui affiche les noms des joueurs au-dessus de leurs têtes.
+// MonoBehaviourPunCallbacks = SimulationBehaviour et NetworkBehaviour
 // PhotonView = NetworkObject
 // photonView.IsMine = Object.HasInputAuthority et Object.HasStateAuthority
 // PhotonNetwork = SimulationBehaviour.Runner et SimulationBehaviour.Object
@@ -23,9 +24,9 @@ public class NameTag : MonoBehaviourPunCallbacks {
     /// </summary>
     void Start() {
         if (photonView.IsMine) {
-            photonView.RPC("SetName", RpcTarget.All, PhotonNetwork.NickName);
+            photonView.RPC("MettreNom", RpcTarget.All, PhotonNetwork.NickName);
         } else {
-            SetName(photonView.Owner.NickName);
+            MettreNom(photonView.Owner.NickName);
         }
     }
 
@@ -43,7 +44,7 @@ public class NameTag : MonoBehaviourPunCallbacks {
     /// Fonction RPC pour définir le nom du joueur.
     /// </summary>
     [PunRPC]
-    void SetName(string nom) {
+    void MettreNom(string nom) {
         texteNom.text = nom;
     }
 }

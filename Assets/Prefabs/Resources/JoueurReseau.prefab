@@ -489,10 +489,10 @@ MonoBehaviour:
   vitesseCouler: 0.08
   tempsCouler: 2.5
   tempsRespawn: 8
-  mortAudio: {fileID: 0}
-  dommageAudio: {fileID: 0}
-  joueurAudio: {fileID: 0}
-  vitesseFlash: 2
+  mortAudio: {fileID: 8300000, guid: 1f10b0265e9c54d6fb1dfbb7ac77765f, type: 3}
+  dommageAudio: {fileID: 8300000, guid: 0a3e776ee656643d1a9b87039cb5ba5c, type: 3}
+  joueurAudio: {fileID: 7851867154502868802}
+  vitesseFlash: 5
   couleurFlash: {r: 1, g: 0, b: 0, a: 0.1}
   nameTag: {fileID: 1982785632335511720}
   animator: {fileID: 1753684856829438935}

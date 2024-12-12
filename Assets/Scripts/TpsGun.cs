@@ -6,6 +6,10 @@ using Photon.Pun;
 // Script qui contrôle l'arme en vue à la troisième personne.
 // L'arme va être répliqué sur le réseau.
 // C'est principalement pour le transform et les particules.
+// MonoBehaviourPunCallbacks = SimulationBehaviour et NetworkBehaviour
+// IPunObservable.OnPhotonSerializeView() = Networked Properties
+// PhotonView = NetworkObject
+// photonView.IsMine = Object.HasInputAuthority et Object.HasStateAuthority
 
 public class TpsGun : MonoBehaviourPunCallbacks, IPunObservable {
     // Pour modifier la position locale Y de TpsGun en cas de changement d'angle de visée

@@ -7,10 +7,12 @@ using UnityStandardAssets.Characters.FirstPerson;
 [RequireComponent(typeof(FirstPersonController))]
 
 // Script qui exécute les déplacements du joueur.
-// Le script FirstPersonController est un script qui fait partie des Standard
-// Assets d'Unity.
+// Le script FirstPersonController est un script qui fait partie des anciens
+// Standard Assets d'Unity.
+// MonoBehaviourPunCallbacks = SimulationBehaviour et NetworkBehaviour
+// IPunObservable.OnPhotonSerializeView() = Networked Properties
 // PhotonView = NetworkObject
-// photonView.IsMine = Object.HasInputAuthority / Object.HasStateAuthority
+// photonView.IsMine = Object.HasInputAuthority et Object.HasStateAuthority
 
 public class GestionnaireMouvementPersonnage : MonoBehaviourPunCallbacks, IPunObservable {
     // Animator du joueur

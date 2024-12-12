@@ -6,8 +6,10 @@ using Photon.Pun;
 using Photon.Realtime;
 
 // Script qui contrôle l'ensemble de la connexion réseau.
+// MonoBehaviourPunCallbacks = SimulationBehaviour et NetworkBehaviour
 // PhotonView = NetworkObject
 // PhotonNetwork = SimulationBehaviour.Runner et SimulationBehaviour.Object
+// PhotonNetwork.Instantiate() = Runner.Spawn()
 
 public class NetworkManager : MonoBehaviourPunCallbacks {
     // Texte de connexion
@@ -64,15 +66,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks {
     private const int nombreMessages = 10;
 
     // Pour mémoriser le nom d'utilisateur du joueur pour une utilisation ultérieure
-    private string nickNamePrefKey = "NomJoueur";
+    private string nicknamePrefKey = "NomJoueur";
 
     /// <summary>
     /// Start is called before the first frame update.
     /// </summary>
     void Start() {
         messages = new Queue<string> (nombreMessages);
-        if (PlayerPrefs.HasKey(nickNamePrefKey)) {
-            nomJoueur.text = PlayerPrefs.GetString(nickNamePrefKey);
+        if (PlayerPrefs.HasKey(nicknamePrefKey)) {
+            nomJoueur.text = PlayerPrefs.GetString(nicknamePrefKey);
         }
         PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.ConnectUsingSettings();
@@ -123,7 +125,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks {
         serverWindow.SetActive(false);
         texteConnexion.text = "Rejoindre la salle...";
         PhotonNetwork.LocalPlayer.NickName = nomJoueur.text;
-        PlayerPrefs.SetString(nickNamePrefKey, nomJoueur.text);
+        PlayerPrefs.SetString(nicknamePrefKey, nomJoueur.text);
         RoomOptions roomOptions = new RoomOptions() {
             IsVisible = true,
             MaxPlayers = 8

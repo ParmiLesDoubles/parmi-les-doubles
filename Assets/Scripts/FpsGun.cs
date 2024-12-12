@@ -5,6 +5,9 @@ using Photon.Pun;
 
 // Script qui contrôle l'arme en vue à la première personne.
 // C'est principalement pour le tir du joueur.
+// PhotonView = NetworkObject
+// PhotonNetwork = SimulationBehaviour.Runner et SimulationBehaviour.Object
+// PhotonNetwork.Instantiate() = Runner.Spawn()
 
 public class FpsGun : MonoBehaviour {
     // Quantité de dommages par tir

@@ -14,6 +14,8 @@ using UnityStandardAssets.Characters.FirstPerson;
 // comme s'il s'agissait d'une variable.
 // Dans Unity, un event est un type particulier de delegate
 // que vous pouvez utiliser pour déclencher des actions dans votre code.
+// MonoBehaviourPunCallbacks = SimulationBehaviour et NetworkBehaviour
+// IPunObservable.OnPhotonSerializeView() = Networked Properties
 // PhotonView = NetworkObject
 // photonView.IsMine = Object.HasInputAuthority et Object.HasStateAuthority
 // PhotonNetwork = SimulationBehaviour.Runner et SimulationBehaviour.Object
@@ -54,24 +56,49 @@ public class GestionnairePointsDeVie : MonoBehaviourPunCallbacks, IPunObservable
     // Son qui joue lorsqu'un joueur subit des dommages
     [SerializeField]
     private AudioClip dommageAudio;
+
+    // AudioSource du joueur
     [SerializeField]
     private AudioSource joueurAudio;
+
+    // Vitesse du flash qui apparaît lorsqu'un joueur est touché
     [SerializeField]
-    private float vitesseFlash = 2f;
+    private float vitesseFlash = 5f;
+
+    // Couleur du flash qui apparaît lorsqu'un joueur est touché
     [SerializeField]
     private Color couleurFlash = new Color(1f, 0f, 0f, 0.1f);
+
+    // Contient la référence au script NameTag qui se trouve dans CanvasNom
     [SerializeField]
     private NameTag nameTag;
+
+    // Animator du joueur
     [SerializeField]
     private Animator animator;
 
+    // Contient la référence au script FirstPersonController
     private FirstPersonController firstPersonController;
+
+    // Contient la référence au script IKControl qui se trouve dans Visuel
     private IKControl ikControl;
+
+    // Slider pour la barre de santé du joueur
     private Slider ptsVieSlider;
+
+    // Image pour le flash qui apparaît lorsqu'un joueur est touché
     private Image damageImage;
+
+    // Points de vie du joueur
     private int ptsVie;
+
+    // Pour savoir si le joueur est mort ou non
     private bool estMort;
+
+    // Pour savoir si le joueur doit couler ou non
     private bool coule;
+
+    // Pour savoir si le joueur subit des dommages ou non
     private bool dommage;
 
     /// <summary>

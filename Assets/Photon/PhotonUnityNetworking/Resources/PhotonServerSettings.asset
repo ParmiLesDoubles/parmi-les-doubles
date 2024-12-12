@@ -36,9 +36,9 @@ MonoBehaviour:
   - AjouterMessage_RPC
   - ClickRpc
   - DestroyRpc
+  - MettreNom
   - Mort
   - PrendreDommages
-  - SetName
   - Shoot
   DisableAutoOpenWizard: 1
   ShowSettings: 1
