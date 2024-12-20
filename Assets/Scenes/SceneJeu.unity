@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 604533719}
   - component: {fileID: 604533727}
   m_Layer: 0
-  m_Name: CameraScene
+  m_Name: SceneCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1358,7 +1358,7 @@ Camera:
   m_Depth: 5
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 23606
+    m_Bits: 22326
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

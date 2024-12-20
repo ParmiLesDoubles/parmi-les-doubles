@@ -9,7 +9,7 @@ AnimatorController:
   m_Name: ControlleurGun
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Firing
+  - m_Name: Tirer
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -17,7 +17,7 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: ControlleurGun
+    m_Name: Base Layer
     m_StateMachine: {fileID: 110791802}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -37,7 +37,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Firing
+    m_ConditionEvent: Tirer
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110270832}
@@ -62,7 +62,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Firing
+    m_ConditionEvent: Tirer
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110231764}
@@ -85,7 +85,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Firing
+  m_Name: Tirer
   m_Speed: 5
   m_CycleOffset: 0
   m_Transitions:

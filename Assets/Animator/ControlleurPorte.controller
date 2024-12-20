@@ -17,7 +17,7 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: ControlleurPorte
+    m_Name: Base Layer
     m_StateMachine: {fileID: 110765468}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -111,7 +111,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DoorClose
+  m_Name: FermerPorte
   m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
@@ -138,7 +138,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DoorOpen
+  m_Name: OuvrirPorte
   m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:

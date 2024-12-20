@@ -33,7 +33,7 @@ MonoBehaviour:
   RunInBackground: 1
   StartInOfflineMode: 0
   RpcList:
-  - AjouterMessage_RPC
+  - AjouterMessageRPC
   - ClickRpc
   - DestroyRpc
   - MettreNom
