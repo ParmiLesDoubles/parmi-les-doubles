@@ -113,9 +113,9 @@ public class GestionnaireMouvementPersonnage : MonoBehaviourPunCallbacks, IPunOb
             animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
             animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
             if (Input.GetButtonDown("Jump")) {
-                animator.SetTrigger("IsJumping");
+                animator.SetTrigger("Sauter");
             }
-            animator.SetBool("Running", Input.GetKey(KeyCode.LeftShift));
+            animator.SetBool("Courir", Input.GetKey(KeyCode.LeftShift));
         }
     }
 

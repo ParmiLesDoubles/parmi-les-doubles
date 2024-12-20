@@ -1,0 +1,262 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "ParrelSync/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/ParrelSync.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ParrelSync.dll": {}
+        }
+      },
+      "PhotonChat/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "PhotonWebSocket": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PhotonChat.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotonChat.dll": {}
+        }
+      },
+      "PhotonRealtime/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "PhotonWebSocket": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PhotonRealtime.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotonRealtime.dll": {}
+        }
+      },
+      "PhotonUnityNetworking/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "PhotonRealtime": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PhotonUnityNetworking.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotonUnityNetworking.dll": {}
+        }
+      },
+      "PhotonUnityNetworking.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "PhotonRealtime": "1.0.0",
+          "PhotonUnityNetworking": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PhotonUnityNetworking.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotonUnityNetworking.Editor.dll": {}
+        }
+      },
+      "PhotonUnityNetworking.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "PhotonRealtime": "1.0.0",
+          "PhotonUnityNetworking": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PhotonUnityNetworking.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotonUnityNetworking.Utilities.dll": {}
+        }
+      },
+      "PhotonUnityNetworking.Utilities.Culling.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "PhotonUnityNetworking.Utilities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PhotonUnityNetworking.Utilities.Culling.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotonUnityNetworking.Utilities.Culling.Editor.dll": {}
+        }
+      },
+      "PhotonUnityNetworking.Utilities.PhotonPlayer.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "PhotonRealtime": "1.0.0",
+          "PhotonUnityNetworking": "1.0.0",
+          "PhotonUnityNetworking.Editor": "1.0.0",
+          "PhotonUnityNetworking.Utilities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.dll": {}
+        }
+      },
+      "PhotonWebSocket/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/PhotonWebSocket.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotonWebSocket.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ParrelSync/1.0.0": {
+      "type": "project",
+      "path": "ParrelSync.csproj",
+      "msbuildProject": "ParrelSync.csproj"
+    },
+    "PhotonChat/1.0.0": {
+      "type": "project",
+      "path": "PhotonChat.csproj",
+      "msbuildProject": "PhotonChat.csproj"
+    },
+    "PhotonRealtime/1.0.0": {
+      "type": "project",
+      "path": "PhotonRealtime.csproj",
+      "msbuildProject": "PhotonRealtime.csproj"
+    },
+    "PhotonUnityNetworking/1.0.0": {
+      "type": "project",
+      "path": "PhotonUnityNetworking.csproj",
+      "msbuildProject": "PhotonUnityNetworking.csproj"
+    },
+    "PhotonUnityNetworking.Editor/1.0.0": {
+      "type": "project",
+      "path": "PhotonUnityNetworking.Editor.csproj",
+      "msbuildProject": "PhotonUnityNetworking.Editor.csproj"
+    },
+    "PhotonUnityNetworking.Utilities/1.0.0": {
+      "type": "project",
+      "path": "PhotonUnityNetworking.Utilities.csproj",
+      "msbuildProject": "PhotonUnityNetworking.Utilities.csproj"
+    },
+    "PhotonUnityNetworking.Utilities.Culling.Editor/1.0.0": {
+      "type": "project",
+      "path": "PhotonUnityNetworking.Utilities.Culling.Editor.csproj",
+      "msbuildProject": "PhotonUnityNetworking.Utilities.Culling.Editor.csproj"
+    },
+    "PhotonUnityNetworking.Utilities.PhotonPlayer.Editor/1.0.0": {
+      "type": "project",
+      "path": "PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj",
+      "msbuildProject": "PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj"
+    },
+    "PhotonWebSocket/1.0.0": {
+      "type": "project",
+      "path": "PhotonWebSocket.csproj",
+      "msbuildProject": "PhotonWebSocket.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "ParrelSync >= 1.0.0",
+      "PhotonChat >= 1.0.0",
+      "PhotonRealtime >= 1.0.0",
+      "PhotonUnityNetworking >= 1.0.0",
+      "PhotonUnityNetworking.Editor >= 1.0.0",
+      "PhotonUnityNetworking.Utilities >= 1.0.0",
+      "PhotonUnityNetworking.Utilities.Culling.Editor >= 1.0.0",
+      "PhotonUnityNetworking.Utilities.PhotonPlayer.Editor >= 1.0.0",
+      "PhotonWebSocket >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/phosphora/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Assembly-CSharp-firstpass.csproj",
+      "projectName": "Assembly-CSharp-firstpass",
+      "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Assembly-CSharp-firstpass.csproj",
+      "packagesPath": "/Users/phosphora/.nuget/packages/",
+      "outputPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/Temp/obj/Debug/Assembly-CSharp-firstpass/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/phosphora/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/ParrelSync.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/ParrelSync.csproj"
+            },
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonChat.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonChat.csproj"
+            },
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonRealtime.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonRealtime.csproj"
+            },
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.csproj"
+            },
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.Editor.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.Editor.csproj"
+            },
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.Utilities.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.Utilities.csproj"
+            },
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.Utilities.Culling.Editor.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.Utilities.Culling.Editor.csproj"
+            },
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj"
+            },
+            "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonWebSocket.csproj": {
+              "projectPath": "/Users/phosphora/Documents/GitHub/parmi-les-doubles/PhotonWebSocket.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -58,11 +58,11 @@ public class FpsGun : MonoBehaviour {
     /// </summary>
     void Update() {
         timer += Time.deltaTime;
-        bool shooting = Input.GetButton("Fire1");
-        if (shooting && timer >= delaiEntreTirs && Time.timeScale != 0) {
+        bool tirer = Input.GetButton("Fire1");
+        if (tirer && timer >= delaiEntreTirs && Time.timeScale != 0) {
             Shoot();
         }
-        animator.SetBool("Firing", shooting);
+        animator.SetBool("Tirer", tirer);
     }
 
     /// <summary>
@@ -99,7 +99,7 @@ public class FpsGun : MonoBehaviour {
             }
         }
         // RPC pour la vue à la troisième personne.
-        tpsGun.RPCShoot();
+        tpsGun.ShootRPC();
     }
 
     /// <summary>

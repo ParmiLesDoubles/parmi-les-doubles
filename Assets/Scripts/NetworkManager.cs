@@ -183,7 +183,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks {
     /// </summary>
     /// <param name="message">Le message que l'on veut ajouter.</param>
     void AjouterMessage(string message) {
-        photonView.RPC("AjouterMessage_RPC", RpcTarget.All, message);
+        photonView.RPC("AjouterMessageRPC", RpcTarget.All, message);
     }
 
     /// <summary>
@@ -191,7 +191,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks {
     /// </summary>
     /// <param name="message">Le message que l'on veut ajouter.</param>
     [PunRPC]
-    void AjouterMessage_RPC(string message) {
+    void AjouterMessageRPC(string message) {
         messages.Enqueue(message);
         if (messages.Count > nombreMessages) {
             messages.Dequeue();

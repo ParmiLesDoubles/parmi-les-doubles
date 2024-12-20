@@ -149,7 +149,7 @@ public class GestionnairePointsDeVie : MonoBehaviourPunCallbacks, IPunObservable
                 photonView.RPC("Mort", RpcTarget.All, nomEnnemi);
             }
             ptsVieSlider.value = ptsVie;
-            animator.SetTrigger("IsHurt");
+            animator.SetTrigger("EstTouche");
         }
         joueurAudio.clip = dommageAudio;
         joueurAudio.Play();
@@ -166,7 +166,7 @@ public class GestionnairePointsDeVie : MonoBehaviourPunCallbacks, IPunObservable
         nameTag.gameObject.SetActive(false);
         if (photonView.IsMine) {
             firstPersonController.enabled = false;
-            animator.SetTrigger("IsDead");
+            animator.SetTrigger("EstMort");
             AjouterMessageEvent(PhotonNetwork.LocalPlayer.NickName + " a été tué par " + nomEnnemi + " !");
             RespawnEvent(tempsRespawn);
             StartCoroutine("DestoryJoueur", tempsRespawn);

@@ -93,9 +93,9 @@ public class TpsGun : MonoBehaviourPunCallbacks, IPunObservable {
     }
 
     /// <summary>
-    /// Fonction publique pour appeler la RPC Shoot.
+    /// Fonction publique pour appeler la fonction RPC Shoot.
     /// </summary>
-    public void RPCShoot() {
+    public void ShootRPC() {
         if (photonView.IsMine) {
             photonView.RPC("Shoot", RpcTarget.All);
         }

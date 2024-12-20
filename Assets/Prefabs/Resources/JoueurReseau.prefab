@@ -11822,19 +11822,19 @@ MonoBehaviour:
     Name: Horizontal
   - Type: 4
     SynchronizeType: 1
-    Name: Firing
+    Name: Tirer
   - Type: 4
     SynchronizeType: 1
-    Name: Running
+    Name: Courir
   - Type: 9
     SynchronizeType: 1
-    Name: IsDead
+    Name: EstMort
   - Type: 9
     SynchronizeType: 1
-    Name: IsHurt
+    Name: EstTouche
   - Type: 9
     SynchronizeType: 1
-    Name: IsJumping
+    Name: Sauter
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
